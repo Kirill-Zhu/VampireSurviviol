@@ -17,4 +17,5 @@ public struct PlayerMover: IComponentData {
     public float MoveSpeed;
     public float RotationSpeed;
     public float3 InputTargetPosition;
+    public float3 Rotation;
 }

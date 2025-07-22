@@ -10,8 +10,7 @@ namespace LVLUP {
         class BakeExpCrystal : Baker<ExpCrystalAuthoring> {
             public override void Bake(ExpCrystalAuthoring authoring) {
                 Entity entity = GetEntity(TransformUsageFlags.Dynamic);
-                AddComponent(entity, new ExpCrystal { Exp = authoring.Exp, TypeOfExpCrystal = authoring.TypeOfExpCrystal});
-
+                AddComponent(entity, new ExpCrystal { Exp = (int)authoring.TypeOfExpCrystal, TypeOfExpCrystal = authoring.TypeOfExpCrystal });
             }
         }
     }
@@ -23,7 +22,7 @@ namespace LVLUP {
     public enum TypeOfExpCystal {
         None = 0,
         blue = 1,
-        green = 2,
-        Red  = 3
+        green = 10,
+        Red  = 50
     }
 }

@@ -16,8 +16,10 @@ public class CollisionEventDataAuthoring: MonoBehaviour {
 }
 public struct CollisionEventData : IComponentData
 {
-    public Entity otherEntity;
+    public Entity EntityA;
+    public Entity EntityB;
     public float3 ImpactNormal;
+    public float3 Position;
     public float Impulse;
     public int Damage;
 

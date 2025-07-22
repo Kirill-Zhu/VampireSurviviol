@@ -16,9 +16,8 @@ partial struct PlayerMoveSystem : ISystem
         _prevRotation = Quaternion.identity;
     }
 
-   
-    public void OnUpdate(ref SystemState state)
-    {
+
+    public void OnUpdate(ref SystemState state) {
         //PlayerMoverJob job = new PlayerMoverJob() { 
         //    DeltaTime = SystemAPI.Time.DeltaTime};
         //job.ScheduleParallel();
@@ -40,33 +39,41 @@ partial struct PlayerMoveSystem : ISystem
             moveDirection = playerMover.ValueRO.InputTargetPosition;
             moveDirection = math.clamp(moveDirection, -playerMover.ValueRO.MoveSpeed, playerMover.ValueRO.MoveSpeed);
 
+           
+            //Move
             if (moveDirection.x != 0 || moveDirection.z != 0) {
 
 
                 // localTransform.ValueRW.Position += moveDirection * playerMover.ValueRO.MoveSpeed * SystemAPI.Time.DeltaTime;
 
                 physicsVelocity.ValueRW.Linear = moveDirection * playerMover.ValueRO.MoveSpeed;
-               
+
                 physicsVelocity.ValueRW.Angular = float3.zero;
-                
-                _prevRotation = math.slerp(localTransform.ValueRO.Rotation, quaternion.LookRotation(moveDirection, math.up()), SystemAPI.Time.DeltaTime * playerMover.ValueRO.RotationSpeed);
+
+
 
             } else {
                 physicsVelocity.ValueRW.Linear = float3.zero;
-               
+
             }
+            //Rotation
+            if (playerMover.ValueRO.Rotation.x != 0|| playerMover.ValueRO.Rotation.z!= 0) {
+                _prevRotation = math.slerp(localTransform.ValueRO.Rotation, quaternion.LookRotation(playerMover.ValueRO.Rotation, math.up()), SystemAPI.Time.DeltaTime * playerMover.ValueRO.RotationSpeed);
                 localTransform.ValueRW.Rotation = _prevRotation;
+            }
+
             
             //Gravity
 
             PhysicsWorldSingleton physicsWorldSingleton = SystemAPI.GetSingleton<PhysicsWorldSingleton>();
             ColliderCastHit hit = new ColliderCastHit();
 
-            physicsWorldSingleton.SphereCast(localTransform.ValueRO.Position, 0.1f, math.down(), 0.9f,out hit,
+            physicsWorldSingleton.SphereCast(localTransform.ValueRO.Position + new float3(0,-0.61f,0), 0.1f, math.down(), 0.9f,out hit,
                 new CollisionFilter { BelongsTo = (uint)Layers.player, CollidesWith =(uint)Layers.Default}, QueryInteraction.IgnoreTriggers);
 
             if (hit.Entity.GetHashCode() == 0) {
-                physicsVelocity.ValueRW.Linear.y = Physics.gravity.y;
+                Debug.Log("Player is falling down");
+                physicsVelocity.ValueRW.Linear.y = -40f;
             }
             
             PlayerCharacterMonobeh.instance.Position = localTransform.ValueRO.Position;

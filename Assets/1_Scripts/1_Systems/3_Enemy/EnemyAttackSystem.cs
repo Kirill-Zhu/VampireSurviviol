@@ -88,17 +88,17 @@ public partial struct AttackJob : IJobEntity {
    
   
     public void Execute(ref EnemyAttack attack, in LocalTransform localTransform,[EntityIndexInQuery]int sortKey) {
-        attack.AttackTime += DeltaTime;     
-        if (attack.AttackTime > attack.AttackRate) {
-
-            if (math.distance(localTransform.Position, PlayerPos) <= attack.AttackRange) {
-                attack.AttackTime = 0;
+        if (math.distance(localTransform.Position, PlayerPos) <= attack.AttackRange) {
+            attack.AttackTime += DeltaTime;
+            if (attack.AttackTime > attack.AttackRate) {
                 Debug.Log("Enemy Attack");
-               
+
                 PlayerDamageBufferElement playerDamageBuffer = new PlayerDamageBufferElement { Value = attack.Damage };
-                ecb.AppendToBuffer(sortKey,entity,playerDamageBuffer);
-                   
+                ecb.AppendToBuffer(sortKey, entity, playerDamageBuffer);
+                attack.AttackTime = 0;
             }
+        } else {
+            attack.AttackTime = 0;
         }
     }
 }

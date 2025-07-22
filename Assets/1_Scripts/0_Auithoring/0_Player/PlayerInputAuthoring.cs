@@ -14,5 +14,5 @@ class PlayerInputAuthoring : MonoBehaviour
 
 public struct PlayerInput: IComponentData {
 
-   public bool UltWasPressed;
+    
 }

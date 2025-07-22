@@ -4,6 +4,7 @@ using Unity.Physics;
 using Unity.Mathematics;
 
 using Unity.Burst;
+using System.Diagnostics;
 partial struct UnitMoverSystem : ISystem
 {
     float3 playerPos;
@@ -56,15 +57,23 @@ public partial struct UnitMoverJob : IJobEntity {
     public void Execute(ref LocalTransform localTransform, ref UnitMover unitMover, ref PhysicsVelocity physicsVelocity) {
         
         
-        float3 moveDirection = targetPos - localTransform.Position;
-        
+            float3 moveDirection = targetPos - localTransform.Position;
+            moveDirection.y = 0;
           
             moveDirection = math.normalize(moveDirection);
 
             localTransform.Rotation = math.slerp(localTransform.Rotation, quaternion.LookRotation(moveDirection, math.up()),
-                deltaTime * unitMover.RotationSpeed);
-              physicsVelocity.Linear += moveDirection * unitMover.MoveSpeed*deltaTime;
-              physicsVelocity.Angular = float3.zero;
+              deltaTime * unitMover.RotationSpeed);
+     
+        physicsVelocity.Linear += moveDirection * unitMover.MoveSpeed*deltaTime;
+
+        //UnityEngine.Debug.Log("Physics Velocity is "+ physicsVelocity.Linear);
+      
+        physicsVelocity.Angular = float3.zero;
+        
+        
+        
+        
             //float moveSpeed = unitMover.MoveSpeed;
             //localTransform.Position += moveDirection * 10 * deltaTime;
     

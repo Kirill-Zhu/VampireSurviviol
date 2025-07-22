@@ -1,102 +1,101 @@
+
 using Unity.Burst;
-using Unity.Collections;
 using Unity.Entities;
 using Unity.Physics;
 using Unity.Physics.Systems;
-using UnityEditor.Build;
+using Unity.Collections;
 using UnityEngine;
 
-// This system applies an impulse to any dynamic that collides with a Repulsor.
-// A Repulsor is defined by a PhysicsShapeAuthoring with the `Raise Collision Events` flag ticked and a
-// CollisionEventImpulse behaviour added.
+//// Компонент для отметки объектов, которые должны обрабатывать коллизии
+public struct CollisionProcessor : IComponentData { }
+
 [RequireMatchingQueriesForUpdate]
 [UpdateInGroup(typeof(FixedStepSimulationSystemGroup))]
 [UpdateAfter(typeof(PhysicsSystemGroup))]
-public partial struct CollisionEventSystem : ISystem {
-    internal ComponentDataHandles m_ComponentDataHandles;
-
-    internal struct ComponentDataHandles {
-        public ComponentLookup<CollisionEventData> CollisionEventData;
-        public ComponentLookup<EnemyHealth> EnemyHealth;
-
-        public ComponentDataHandles(ref SystemState systemState) {
-            CollisionEventData = systemState.GetComponentLookup<CollisionEventData>(true);
-            EnemyHealth = systemState.GetComponentLookup<EnemyHealth>(false);
-        }
-
-        public void Update(ref SystemState systemState) {
-            CollisionEventData.Update(ref systemState);
-            EnemyHealth.Update(ref systemState);
-        }
-    }
+public partial struct SimpleCollisionSystem : ISystem {
 
     [BurstCompile]
     public void OnCreate(ref SystemState state) {
-        state.RequireForUpdate(state.GetEntityQuery(ComponentType.ReadOnly<CollisionEventData>()));
-        state.RequireForUpdate(state.GetEntityQuery(ComponentType.ReadOnly<EnemyHealth>())); ;
-        m_ComponentDataHandles = new ComponentDataHandles(ref state);
+        state.RequireForUpdate<SimulationSingleton>();
+        state.RequireForUpdate<PhysicsWorldSingleton>();
     }
+
+    [BurstCompile]
+    public void OnDestroy(ref SystemState state) { }
 
     [BurstCompile]
     public void OnUpdate(ref SystemState state) {
+
+
+        var ecbSingletone = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>();
+
+        // Получаем синглтоны физики
+        var simulationSingleton = SystemAPI.GetSingleton<SimulationSingleton>();
         
-        m_ComponentDataHandles.Update(ref state);
-        state.Dependency = new CollisionEventImpulseJob {
-            CollisionEventData = m_ComponentDataHandles.CollisionEventData,
-            EnemyHealth = m_ComponentDataHandles.EnemyHealth,
-        }.Schedule(SystemAPI.GetSingleton<SimulationSingleton>(), state.Dependency);
+        
+
+        var playerProjectileAndEnemyCollisionEventJob = new CollisionPlayerProjectileAndEnemyEventJob {
+            EnemyHealthLookUp = SystemAPI.GetComponentLookup<EnemyHealth>(),
+            PlayerProjectileLookup = SystemAPI.GetComponentLookup<PlayerProjectile>(true),
+            AudioOnCollisonLookup = SystemAPI.GetComponentLookup<AudioOnCollision>(),
+
+            ecb = ecbSingletone.CreateCommandBuffer(state.WorldUnmanaged).AsParallelWriter(),
+        };
+
+
+        // Запускаем Job и связываем его с ECB
+        state.Dependency = playerProjectileAndEnemyCollisionEventJob.Schedule(simulationSingleton, state.Dependency);
     }
 
     [BurstCompile]
-    struct CollisionEventImpulseJob : ICollisionEventsJob {
-        [ReadOnly] public ComponentLookup<CollisionEventData> CollisionEventData;
-        public ComponentLookup<EnemyHealth> EnemyHealth;
+    private struct CollisionPlayerProjectileAndEnemyEventJob : ICollisionEventsJob {
+        public ComponentLookup<EnemyHealth> EnemyHealthLookUp;
+        [ReadOnly] public ComponentLookup<PlayerProjectile> PlayerProjectileLookup;
+        public ComponentLookup<AudioOnCollision> AudioOnCollisonLookup;
         
-        public void Execute(CollisionEvent collisionEvent){
+        public EntityCommandBuffer.ParallelWriter ecb;
+        public void Execute(CollisionEvent collisionEvent) {
             Entity entityA = collisionEvent.EntityA;
             Entity entityB = collisionEvent.EntityB;
-            Debug.Log("Hit enemy by bullet");
+
+            // Проверяем, есть ли у сущностей компонент CollisionProcessor
+            bool AIsHealth = EnemyHealthLookUp.HasComponent(entityA);
+            bool BIsHealth = EnemyHealthLookUp.HasComponent(entityB);
+
+            bool AIsPlayerProjectile = PlayerProjectileLookup.HasComponent(entityA);
+            bool BISPlyaerProjectile = PlayerProjectileLookup.HasComponent(entityB);
 
 
-            //bool isBodyADynamic = PhysicsVelocityData.HasComponent(entityA);
-            //bool isBodyBDynamic = PhysicsVelocityData.HasComponent(entityB);
+            if (AIsHealth && BISPlyaerProjectile) {
+                // Получаем скорости (если есть)
+                var projectile = PlayerProjectileLookup[entityB];
+                var enemy = EnemyHealthLookUp[entityA];
 
-            //bool isBodyARepulser = CollisionEventData.HasComponent(entityA);
-            //bool isBodyBRepulser = CollisionEventData.HasComponent(entityB);
+                enemy.Health -= projectile.Damage;
 
-            //if (isBodyARepulser && isBodyBDynamic) {
-            //    var impulseComponent = CollisionEventData[entityA];
-            //    var velocityComponent = PhysicsVelocityData[entityB];
-            //    velocityComponent.Linear = impulseComponent.Impulse;
-            //    PhysicsVelocityData[entityB] = velocityComponent;
-            //}
-
-            //if (isBodyBRepulser && isBodyADynamic) {
-            //    var impulseComponent = CollisionEventData[entityB];
-            //    var velocityComponent = PhysicsVelocityData[entityA];
-            //    velocityComponent.Linear = impulseComponent.Impulse;
-            //    PhysicsVelocityData[entityA] = velocityComponent;
-            //}
-            bool IsBodyAHasHealth = EnemyHealth.HasComponent(entityA);
-            bool IsBodyBHasHealth = EnemyHealth.HasComponent(entityB);
-
-            bool IsBodyACollisionable = CollisionEventData.HasComponent(entityA);
-            bool IsBodyBCollisionable = CollisionEventData.HasComponent(entityB);
-
-            if (IsBodyAHasHealth && IsBodyBCollisionable) {
                 
-                var healthComponent = EnemyHealth[entityA];
-                var damageComponent = CollisionEventData[entityB];
-                healthComponent.DoDamage(damageComponent.Damage);
-                EnemyHealth[entityA] = healthComponent;
+                EnemyHealthLookUp[entityA] = enemy;
+                //Audio
+                if (AudioOnCollisonLookup.HasComponent(entityB)) {
+                    var audioSource = AudioOnCollisonLookup[entityB];
+                    AudioOnCollisonLookup[entityB] = audioSource;
+                 
+                    ecb.AddComponent<AudioOnCollision>(collisionEvent.BodyIndexB, entityB, new AudioOnCollision { ShouldPlay = true });
+                }
+               
+                //Destroy Projectile
+                ecb.AddComponent<DestroyTag>(collisionEvent.BodyIndexB, entityB);
+             
+              //Destroy Enemy
+                if (enemy.Health <= 0) {
+                    ecb.AddComponent<DestroyTag>(collisionEvent.BodyIndexA, entityA);
+                }
             }
-            if (IsBodyBHasHealth && IsBodyACollisionable) {
-
-                var healthComponent = EnemyHealth[entityB];
-                var damageComponent = CollisionEventData[entityA];
-                healthComponent.DoDamage(damageComponent.Damage);
-                EnemyHealth[entityB] = healthComponent;
-            }
+           
         }
     }
+
+
+
 }
+

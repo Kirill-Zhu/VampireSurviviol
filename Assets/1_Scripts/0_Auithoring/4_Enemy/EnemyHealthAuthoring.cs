@@ -11,10 +11,13 @@ public class EnemyHealthAuthoring : MonoBehaviour
         }
     }
 }
-public struct EnemyHealth: IComponentData {
+public struct EnemyHealth : IComponentData {
     public int Health;
     public void DoDamage(int DamageValue) {
-        Health-=DamageValue;
+        Health -= DamageValue;
+        if (Health <= 0) {
+
+        }
     }
 }
 public  struct EnemyDamageBufferElement: IBufferElementData {

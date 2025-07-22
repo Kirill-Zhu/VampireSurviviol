@@ -3,34 +3,33 @@ using Unity.Entities;
 using Unity.Transforms;
 using UnityEngine;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 
 
 partial struct EnemySpawnSystem : ISystem
 {
-    public float MinMoveSpeed;
-    public float MaxMoveSpeed;
+ 
 
-    quaternion _playerRotation;
-    float3 _playerPosition;
+    
+    private double _elapsedTime;
+    private double _lastUpdatedTime;
 
-
+    private Unity.Mathematics.Random _random;
     public void OnCreate(ref SystemState state) {
 
-      
+        _random = new Unity.Mathematics.Random((uint)System.DateTime.Now.Ticks);
     }
    
-    public void OnUpdate(ref SystemState state)
-    {
-    SystemAPI.TryGetSingleton<EntitiesReferences>(out EntitiesReferences entitiesReferences);
-        //Get PlayerPos
+    public void OnUpdate(ref SystemState state){
 
-        foreach (RefRO<LocalTransform> localTransform in SystemAPI.Query<RefRO<LocalTransform>>().WithAll<PlayerInput>()) {
-            _playerPosition = localTransform.ValueRO.Position;
-            _playerRotation = localTransform.ValueRO.Rotation;
-        }
+
+        SystemAPI.TryGetSingleton<EntitiesReferences>(out EntitiesReferences entitiesReferences);
+      
 
         //Get Random Value
 
+        _elapsedTime = SystemAPI.Time.ElapsedTime;
+        var entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
         //Enemy Spawn
         foreach (
             RefRO<EnemySpawner> spawner
@@ -40,27 +39,38 @@ partial struct EnemySpawnSystem : ISystem
             >()) {
 
             if (Input.GetKey(KeyCode.Space)) {
+                int randomInt = _random.NextInt(0, 2);
+                Debug.Log("Spawn enemy" + "Random is : "+randomInt);
+                switch (randomInt) {
+                    case 0: {
 
-                Debug.Log("Spawn enemy");
-                Entity enemy = state.EntityManager.Instantiate(entitiesReferences.EnemyPrefab);
-                SystemAPI.SetComponent(enemy, LocalTransform.FromPosition(spawner.ValueRO.SpawnPos));
-                SystemAPI.SetComponent(enemy, UnitMover.SetSpeed(UnityEngine.Random.Range(8, 10), 5));
+                            //Zombie 1
+                            Entity enemy = state.EntityManager.Instantiate(entitiesReferences.Zombie1Prefb);
+
+                            if (entityManager.HasComponent<UnitMover>(enemy)) {
+                                UnitMover unitMover = entityManager.GetComponentData<UnitMover>(enemy);
+                                SystemAPI.SetComponent(enemy, UnitMover.SetSpeedComponents(UnityEngine.Random.Range(unitMover.MoveSpeed -1, unitMover.MoveSpeed+1), 5, unitMover.MinMoveSpeed, unitMover.MaxMoveSpeed));
+                            }
+
+                            SystemAPI.SetComponent(enemy, LocalTransform.FromPosition(spawner.ValueRO.SpawnPos));
+                           
+                           
+                            break;
+                        }
+                    case 1: {
+                            //Zombie 2
+                            Entity enemy = state.EntityManager.Instantiate(entitiesReferences.Zombie2Prefb);
+                            SystemAPI.SetComponent(enemy, LocalTransform.FromPosition(spawner.ValueRO.SpawnPos));
+                           // SystemAPI.SetComponent(enemy, UnitMover.SetSpeedComponents(UnityEngine.Random.Range(8, 10), 5), );
+                            break;
+                        }
+                }
 
             }
-            if (Input.GetKey(KeyCode.LeftShift)) {
-                Entity bullet = state.EntityManager.Instantiate(entitiesReferences.Bullet);
-
-                SystemAPI.SetComponent(bullet, LocalTransform.FromPositionRotation(_playerPosition, _playerRotation));
-
-
-            }
+            
         }
 
+
     }
 
-    [BurstCompile]
-    public void OnDestroy(ref SystemState state)
-    {
-        
-    }
 }

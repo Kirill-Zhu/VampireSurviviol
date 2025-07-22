@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerProjectileAuthoting: MonoBehaviour {
 
-    public float Damage;
+    public int Damage;
     class Baker : Baker<PlayerProjectileAuthoting> {
         public override void Bake(PlayerProjectileAuthoting authoring) {
             Entity entity = GetEntity(TransformUsageFlags.None);
@@ -13,5 +13,5 @@ public class PlayerProjectileAuthoting: MonoBehaviour {
 }
 public struct PlayerProjectile: IComponentData
 {
-    public float Damage;
+    public int Damage;
 }
