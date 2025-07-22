@@ -1054,6 +1054,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710607371}
   m_CullTransparentMesh: 1
+--- !u!4 &731352416 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5159860572397887295, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+  m_PrefabInstance: {fileID: 742331062}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &742331062
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 892166233}
+    m_Modifications:
+    - target: {fileID: 5159860572397887295, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159860572397887295, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159860572397887295, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159860572397887295, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159860572397887295, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159860572397887295, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159860572397887295, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159860572397887295, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159860572397887295, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159860572397887295, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159860572397887295, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159860572397887295, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159860572397887295, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159860572397887295, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5954825382810498355, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+      propertyPath: m_Name
+      value: Vampire A Lusth
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144616940072092732, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 43ddbcd740e73bd4c8e13be881d51c04, type: 3}
 --- !u!1 &798362873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,6 +1264,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 731352416}
   - {fileID: 1559468205}
   - {fileID: 963829281}
   - {fileID: 1173243260}
@@ -1217,7 +1300,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892166231}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
