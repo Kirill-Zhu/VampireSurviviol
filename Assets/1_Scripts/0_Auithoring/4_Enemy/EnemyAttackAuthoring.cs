@@ -11,10 +11,12 @@ public class EnemyAttackAuthoring : MonoBehaviour
     class Beker : Baker<EnemyAttackAuthoring> {
         public override void Bake(EnemyAttackAuthoring authoring) {
           Entity entity = GetEntity(TransformUsageFlags.None);
-            AddComponent(entity, new EnemyAttack { 
+            AddComponent(entity, new EnemyAttack {
                 Damage = authoring.Damage,
                 AttackTime = authoring.AttackTime,
-                AttackRate = authoring.AttackRate,  
+                AttackTimeReloadTimer = authoring.AttackTime,
+                AttackRate = authoring.AttackRate,
+                AttackRealoadTimer = authoring.AttackRate,
                 AttackRange = authoring.AttackRange
             });
         }
@@ -23,6 +25,8 @@ public class EnemyAttackAuthoring : MonoBehaviour
 public struct EnemyAttack : IComponentData {
     public int Damage;
     public float AttackTime;
+    public float AttackTimeReloadTimer;
     public float AttackRate;
+    public float AttackRealoadTimer;
     public float AttackRange;
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerProjectileAuthoting: MonoBehaviour {
 
     public int Damage;
+    
     class Baker : Baker<PlayerProjectileAuthoting> {
         public override void Bake(PlayerProjectileAuthoting authoring) {
             Entity entity = GetEntity(TransformUsageFlags.None);

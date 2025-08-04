@@ -208,8 +208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttackAuthoring
   Damage: 5
-  AttackTime: 0.25
-  AttackRate: 2
+  AttackTime: 1.5
+  AttackRate: 3
   AttackRange: 3
 --- !u!114 &4536866173486103821
 MonoBehaviour:

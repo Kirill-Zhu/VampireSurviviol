@@ -1,11 +1,10 @@
-using System;
 using Unity.Burst;
-using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Transforms;
 using UnityEngine;
+
 
 partial struct PlayerMoveSystem : ISystem
 {
@@ -18,19 +17,23 @@ partial struct PlayerMoveSystem : ISystem
 
 
     public void OnUpdate(ref SystemState state) {
+        var pause = SystemAPI.GetSingleton<PauseComponent>();
+        if (pause.IsPaused)
+            return;
+
         //PlayerMoverJob job = new PlayerMoverJob() { 
         //    DeltaTime = SystemAPI.Time.DeltaTime};
         //job.ScheduleParallel();
 
         foreach ((
 
-            RefRO<PlayerMover> playerMover,
+            RefRW<PlayerMover> playerMover,
             RefRW<LocalTransform> localTransform,
             RefRW<PhysicsVelocity> physicsVelocity)
             in
             SystemAPI.Query<
 
-            RefRO<PlayerMover>,
+            RefRW<PlayerMover>,
             RefRW<LocalTransform>,
             RefRW<PhysicsVelocity>>().WithAll<PlayerInput>()) {
 
@@ -42,16 +45,11 @@ partial struct PlayerMoveSystem : ISystem
            
             //Move
             if (moveDirection.x != 0 || moveDirection.z != 0) {
-
-
                 // localTransform.ValueRW.Position += moveDirection * playerMover.ValueRO.MoveSpeed * SystemAPI.Time.DeltaTime;
 
                 physicsVelocity.ValueRW.Linear = moveDirection * playerMover.ValueRO.MoveSpeed;
 
                 physicsVelocity.ValueRW.Angular = float3.zero;
-
-
-
             } else {
                 physicsVelocity.ValueRW.Linear = float3.zero;
 
@@ -62,13 +60,24 @@ partial struct PlayerMoveSystem : ISystem
                 localTransform.ValueRW.Rotation = _prevRotation;
             }
 
-            
-            //Gravity
-
             PhysicsWorldSingleton physicsWorldSingleton = SystemAPI.GetSingleton<PhysicsWorldSingleton>();
             ColliderCastHit hit = new ColliderCastHit();
+            //Dash
+            if (playerMover.ValueRO.DasWasPressed) {
+                physicsWorldSingleton.SphereCast(localTransform.ValueRO.Position, 0.5f, localTransform.ValueRO.Forward(), playerMover.ValueRO.DashDistance,
+              new CollisionFilter { BelongsTo = (uint)Layers.player, CollidesWith = (uint)Layers.Bounds }, QueryInteraction.IgnoreTriggers);
 
-            physicsWorldSingleton.SphereCast(localTransform.ValueRO.Position + new float3(0,-0.61f,0), 0.1f, math.down(), 0.9f,out hit,
+                if (hit.Entity.GetHashCode() == 0) {
+                    Debug.Log("No dash hit bounds");
+                    localTransform.ValueRW.Position = localTransform.ValueRO.Position+ localTransform.ValueRO.Forward()*playerMover.ValueRO.DashDistance;
+                }
+
+                playerMover.ValueRW.DasWasPressed = false;
+            }
+            //Gravity
+
+
+            physicsWorldSingleton.SphereCast(localTransform.ValueRO.Position + new float3(0,-0.61f,0), 0.05f, math.down(), 0.9f,out hit,
                 new CollisionFilter { BelongsTo = (uint)Layers.player, CollidesWith =(uint)Layers.Default}, QueryInteraction.IgnoreTriggers);
 
             if (hit.Entity.GetHashCode() == 0) {
@@ -78,10 +87,7 @@ partial struct PlayerMoveSystem : ISystem
             
             PlayerCharacterMonobeh.instance.Position = localTransform.ValueRO.Position;
             PlayerCharacterMonobeh.instance.Rotation = localTransform.ValueRO.Rotation;
-
         }
-
-        
     }
 
     [BurstCompile]
@@ -117,5 +123,6 @@ partial struct PlayerMoveSystem : ISystem
 
 enum Layers {
     Default = 1<<0,
-    player = 1<<6
+    player = 1<<6,
+    Bounds = 1<<7
 }

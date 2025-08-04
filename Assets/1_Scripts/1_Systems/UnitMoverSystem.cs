@@ -11,9 +11,12 @@ partial struct UnitMoverSystem : ISystem
     [BurstCompile]
    public void OnUpdate(ref SystemState state) {
 
-        
+        var pause = SystemAPI.GetSingleton<PauseComponent>();
+        if (pause.IsPaused)
+            return;
+
         //Get Player Pos
-        foreach(RefRO<LocalTransform> localTransform 
+        foreach (RefRO<LocalTransform> localTransform 
             in
             SystemAPI.Query<
             RefRO<LocalTransform>
@@ -29,26 +32,6 @@ partial struct UnitMoverSystem : ISystem
             
         };
         job.ScheduleParallel();
-
-        //foreach((RefRW<LocalTransform> localTransform,
-        //        RefRO<UnitMover> unitMover,
-        //        RefRW<PhysicsVelocity> PhysicsVelocity) 
-        //    in  SystemAPI.Query<
-        //        RefRW<LocalTransform>,
-        //        RefRO<UnitMover>,
-        //        RefRW<PhysicsVelocity>>()) {
-   
-        //    float3 moveDirection = unitMover.ValueRO.TargetPosition - localTransform.ValueRO.Position;
-        //    moveDirection = math.normalize(moveDirection);
-
-        //    localTransform.ValueRW.Rotation = math.slerp(localTransform.ValueRO.Rotation, quaternion.LookRotation(moveDirection, math.up()),
-        //        SystemAPI.Time.DeltaTime*unitMover.ValueRO.RotationSpeed);
-        //    //physicsVelocity.ValueRW.Linear = moveDirecrtion * unitMover.ValueRO.moveSpeed;
-        //    //   physicsVelocity.ValueRW.Angular = float3.zero;
-        //    float moveSpeed = unitMover.ValueRO.MoveSpeed;
-        //     localTransform.ValueRW.Position += moveDirection *10* SystemAPI.Time.DeltaTime;
-        //}
-
     }
 }
 public partial struct UnitMoverJob : IJobEntity {
@@ -70,10 +53,7 @@ public partial struct UnitMoverJob : IJobEntity {
         //UnityEngine.Debug.Log("Physics Velocity is "+ physicsVelocity.Linear);
       
         physicsVelocity.Angular = float3.zero;
-        
-        
-        
-        
+    
             //float moveSpeed = unitMover.MoveSpeed;
             //localTransform.Position += moveDirection * 10 * deltaTime;
     

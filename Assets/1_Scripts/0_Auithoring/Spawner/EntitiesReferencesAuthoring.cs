@@ -11,6 +11,7 @@ class EntitiesReferencesAuthoring : MonoBehaviour
     [Header("Enemies Prefabs")]
     public GameObject Zombie1Prefeb;
     public GameObject Zombie2Prefeb;
+    public GameObject Jumper;
     [Header("Exp")]
     public GameObject ExpCystal;
     
@@ -23,6 +24,7 @@ class EntitiesReferencesAuthoring : MonoBehaviour
            
             AddComponent(entity, new EntitiesReferences { Zombie1Prefb = GetEntity(authoring.Zombie1Prefeb, TransformUsageFlags.Dynamic),
             Zombie2Prefb = GetEntity(authoring.Zombie2Prefeb, TransformUsageFlags.Dynamic),
+            Jumper = GetEntity(authoring.Jumper, TransformUsageFlags.Dynamic),
             ExpCystal = GetEntity(authoring.ExpCystal, TransformUsageFlags.Dynamic)
             });
         }
@@ -34,7 +36,7 @@ class EntitiesReferencesAuthoring : MonoBehaviour
 public struct EntitiesReferences: IComponentData {
     public Entity Zombie1Prefb;
     public Entity Zombie2Prefb;
-
+    public Entity Jumper;
 
     public Entity ExpCystal;
 }

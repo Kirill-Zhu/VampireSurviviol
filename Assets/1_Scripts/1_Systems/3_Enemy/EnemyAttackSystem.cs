@@ -14,8 +14,11 @@ partial struct EnemyAttackSystem : ISystem
     }
 
     [BurstCompile]
-    public void OnUpdate(ref SystemState state)
-    {
+    public void OnUpdate(ref SystemState state) {
+        var pause = SystemAPI.GetSingleton<PauseComponent>();
+        if (pause.IsPaused)
+            return;
+
         //Get Plyaer Pos
         foreach (RefRO<LocalTransform> localTransform in SystemAPI.Query<RefRO<LocalTransform>>().WithAll<PlayerInput>()) {
             _playerPos = localTransform.ValueRO.Position;
@@ -89,16 +92,18 @@ public partial struct AttackJob : IJobEntity {
   
     public void Execute(ref EnemyAttack attack, in LocalTransform localTransform,[EntityIndexInQuery]int sortKey) {
         if (math.distance(localTransform.Position, PlayerPos) <= attack.AttackRange) {
-            attack.AttackTime += DeltaTime;
-            if (attack.AttackTime > attack.AttackRate) {
+            attack.AttackRealoadTimer += DeltaTime;
+            attack.AttackTimeReloadTimer += DeltaTime;
+            if (attack.AttackRealoadTimer > attack.AttackRate && attack.AttackTimeReloadTimer>=attack.AttackTime) {
                 Debug.Log("Enemy Attack");
 
                 PlayerDamageBufferElement playerDamageBuffer = new PlayerDamageBufferElement { Value = attack.Damage };
                 ecb.AppendToBuffer(sortKey, entity, playerDamageBuffer);
-                attack.AttackTime = 0;
+                attack.AttackRealoadTimer = 0;
+                attack.AttackTimeReloadTimer = 0;
             }
         } else {
-            attack.AttackTime = 0;
+            attack.AttackTimeReloadTimer = 0;
         }
     }
 }

@@ -7,8 +7,11 @@ using UnityEngine.InputSystem;
 public class PlayerInputs : MonoBehaviour
 {
     public static PlayerInputs Instance;
+    
     [SerializeField] private Vector2 _moveInputVector;
     [SerializeField] private Vector3 _cameraVector;
+    private UnityEngine.InputSystem.PlayerInput _playerInput;
+    
     public Vector3 moveVector;
     public Vector3 RotationVector;
     private InputAction _moveAction;
@@ -27,7 +30,11 @@ public class PlayerInputs : MonoBehaviour
     [Space(2)]
     public bool UltiWasPressed = false;
     public InputAction UltiAction;
+    public InputAction DashAction;
 
+    [Header("UI Navigation")]
+    private Vector2 _UINavigation;
+    private InputAction _UINavigationAction;
     private void Awake() {
 
         if (Instance == null)
@@ -35,15 +42,33 @@ public class PlayerInputs : MonoBehaviour
         else
             Destroy(this.gameObject);
 
+           _playerInput = GetComponent<UnityEngine.InputSystem.PlayerInput>();
+
         _moveAction = InputSystem.actions.FindAction("Move");
         _cameraLookAction = InputSystem.actions.FindAction("Look");
         ShootingAction = InputSystem.actions.FindAction("Fire");
         UltiAction = InputSystem.actions.FindAction("Ulti");
-
-
+        DashAction = InputSystem.actions.FindAction("Dash");
+        
+        _moveAction.Enable();
+        _cameraLookAction.Enable();
+        ShootingAction.Enable();
+        UltiAction.Enable();
+        DashAction.Enable();
+        //UI
+       
     }
-
+ 
     private void Update() {
+        if (Input.GetKeyDown(KeyCode.N)) {
+            if (_playerInput.currentActionMap.name == "Player") {
+                _playerInput.SwitchCurrentActionMap("UI");
+            } else {
+                _playerInput.SwitchCurrentActionMap("Player");
+            }
+          
+            Debug.Log("Switch Action Map");
+        }
         //Time Scaler
         if (Input.GetKeyDown(KeyCode.T)) { 
             var simulationGroup = World.DefaultGameObjectInjectionWorld
@@ -56,7 +81,9 @@ public class PlayerInputs : MonoBehaviour
             simulationGroup.Enabled = true;
         }
         //Move Vector reads
+        
         _moveInputVector = _moveAction.ReadValue<Vector2>();
+        
        
         //Camera Inputs Read
         _cameraLookVector = _cameraLookAction.ReadValue<Vector2>();
@@ -75,15 +102,21 @@ public class PlayerInputs : MonoBehaviour
         RotationVector.y = 0;
         RotationVector.Normalize();
         
+        //Dash
+
         //Shooting
         if(ShootingAction.IsInProgress())
             ShootingWasPressed = true;
 
-        //Ulti Inputs Rea
+        //Ulti Inputs Read
         if (UltiAction.WasPressedThisFrame())
             UltiWasPressed = true;
+
+        //-------------------------------------------UI Input system---------------------------------------------
+    
+
         
-                                                  //Entities
+        //--------------------------------------------Entities---------------------------------------------------
                                                   //To Unit Movers with 
         
         EntityManager entityManager = World.DefaultGameObjectInjectionWorld.EntityManager; // Create Entity world manager
@@ -100,6 +133,11 @@ public class PlayerInputs : MonoBehaviour
                 rotation = RotationVector;
            
             unitMover.Rotation = rotation;
+            }
+
+            //Dash 
+            if (DashAction.WasPressedThisFrame()) {
+                unitMover.DasWasPressed = true; //Disables in PlayerMover System
             }
             entityManager.SetComponentData(entityArray[i], unitMover);
 

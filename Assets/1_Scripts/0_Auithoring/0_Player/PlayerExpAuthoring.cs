@@ -18,8 +18,8 @@ public struct PlayerExp : IComponentData {
 
     public void AddExp(int value) {
         Exp += value;
-        while (Exp > Lvl) {
-            Exp -= Lvl;
+        while (Exp > Lvl*4) {
+            Exp = 0;
             Lvl++;
         }
     }

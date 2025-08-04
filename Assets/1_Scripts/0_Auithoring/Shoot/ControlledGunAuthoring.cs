@@ -6,6 +6,7 @@ public class ControlledGunAuthoring: MonoBehaviour {
     public TypeOfControlledBullet TypeOfBullet;
     public float ReloadTimer;
     public float RateOfFire;
+    public int Damage;
     public class Baker : Baker<ControlledGunAuthoring> {
         public override void Bake(ControlledGunAuthoring authoring) {
             Entity entity = GetEntity(TransformUsageFlags.None);
@@ -14,6 +15,7 @@ public class ControlledGunAuthoring: MonoBehaviour {
                 TypeOfBulelt = authoring.TypeOfBullet, 
                 ReloadTimer = authoring.ReloadTimer,
                 RateOfFire = authoring.RateOfFire,
+                Damage = authoring.Damage,  
             });
         }
     }
@@ -24,6 +26,7 @@ public struct ControlledGun : IComponentData
     public TypeOfControlledBullet TypeOfBulelt;
     public float ReloadTimer;
     public float RateOfFire;
+    public int Damage;
     public bool IsSootingButtonDown;
 }
 public enum TypeOfControlledBullet {

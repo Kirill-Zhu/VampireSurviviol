@@ -5,9 +5,9 @@ using Unity.Transforms;
 using UnityEngine;
 
 partial struct PlayerBulletSpawnSystem : ISystem {
-    quaternion _playerRotation;
-    float3 _playerPosition;
-    LocalTransform playerLocalTransform;
+    //quaternion _playerRotation;
+    //float3 _playerPosition;
+    //LocalTransform playerLocalTransform;
 
     private double _elapsedTime;
     private double _lastUpdatedTime;
@@ -25,11 +25,11 @@ partial struct PlayerBulletSpawnSystem : ISystem {
         SystemAPI.TryGetSingleton<ControlledGun>(out ControlledGun PlayerControleldGun);
         //Get PlayerPos
 
-        foreach (RefRO<LocalTransform> localTransform in SystemAPI.Query<RefRO<LocalTransform>>().WithAll<PlayerInput>()) {
-            _playerPosition = localTransform.ValueRO.Position;
-            _playerRotation = localTransform.ValueRO.Rotation;
-            playerLocalTransform = localTransform.ValueRO;
-        }
+        //foreach (RefRO<LocalTransform> localTransform in SystemAPI.Query<RefRO<LocalTransform>>().WithAll<PlayerInput>()) {
+        //    _playerPosition = localTransform.ValueRO.Position;
+        //    _playerRotation = localTransform.ValueRO.Rotation;
+        //    playerLocalTransform = localTransform.ValueRO;
+        //}
         _elapsedTime = SystemAPI.Time.ElapsedTime;
 
         foreach( (var playerInput, 
@@ -51,8 +51,7 @@ partial struct PlayerBulletSpawnSystem : ISystem {
 
                 Entity bullet = state.EntityManager.Instantiate(playerGun.ValueRO.BulletPrefab);
                 SystemAPI.SetComponent(bullet, LocalTransform.FromPositionRotation(localTransform.ValueRO.Position, localTransform.ValueRO.Rotation));
-
-
+                SystemAPI.SetComponent(bullet, new PlayerProjectile { Damage = playerGun.ValueRO.Damage });
             }
         }
 

@@ -21,7 +21,9 @@ partial struct EnemySpawnSystem : ISystem
     }
    
     public void OnUpdate(ref SystemState state){
-
+        var pause = SystemAPI.GetSingleton<PauseComponent>();
+        if (pause.IsPaused)
+            return;
 
         SystemAPI.TryGetSingleton<EntitiesReferences>(out EntitiesReferences entitiesReferences);
       
@@ -39,7 +41,7 @@ partial struct EnemySpawnSystem : ISystem
             >()) {
 
             if (Input.GetKey(KeyCode.Space)) {
-                int randomInt = _random.NextInt(0, 2);
+                int randomInt = _random.NextInt(0, 3);
                 Debug.Log("Spawn enemy" + "Random is : "+randomInt);
                 switch (randomInt) {
                     case 0: {
@@ -55,15 +57,24 @@ partial struct EnemySpawnSystem : ISystem
                             SystemAPI.SetComponent(enemy, LocalTransform.FromPosition(spawner.ValueRO.SpawnPos));
                            
                            
-                            break;
-                        }
+                        break;
+                     }
                     case 1: {
                             //Zombie 2
                             Entity enemy = state.EntityManager.Instantiate(entitiesReferences.Zombie2Prefb);
                             SystemAPI.SetComponent(enemy, LocalTransform.FromPosition(spawner.ValueRO.SpawnPos));
                            // SystemAPI.SetComponent(enemy, UnitMover.SetSpeedComponents(UnityEngine.Random.Range(8, 10), 5), );
                             break;
-                        }
+                    }
+                    case 2: {
+                            //Jumper
+                            Entity enemy = state.EntityManager.Instantiate(entitiesReferences.Jumper);
+                            SystemAPI.SetComponent(enemy, LocalTransform.FromPosition(spawner.ValueRO.SpawnPos));
+                            // SystemAPI.SetComponent(enemy, UnitMover.SetSpeedComponents(UnityEngine.Random.Range(8, 10), 5), );  
+
+                            break; 
+                    }
+
                 }
 
             }

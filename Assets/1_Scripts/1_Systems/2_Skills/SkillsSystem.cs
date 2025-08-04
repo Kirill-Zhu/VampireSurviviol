@@ -6,13 +6,14 @@ using Unity.Physics;
 using Unity.Transforms;
 using UnityEngine;
 
-
+[RequireMatchingQueriesForUpdate]
 partial struct SkillsSystem : ISystem
 {
     float3 playerPos;
     Skills skills;
     private bool _ultWasPressed;
-  
+ 
+
     [BurstCompile]
     public void OnCreate(ref SystemState state)
     {
@@ -20,7 +21,12 @@ partial struct SkillsSystem : ISystem
     }
 
     [BurstCompile]
+   
     public void OnUpdate(ref SystemState state) {
+        var pause = SystemAPI.GetSingleton<PauseComponent>();
+        if (pause.IsPaused)
+            return;
+
         //if (PlayerInputs.Instance.UltiAction.WasPressedThisFrame()) {
         //Get Player Pos
         foreach (RefRO<LocalTransform> localTransform
@@ -36,7 +42,6 @@ partial struct SkillsSystem : ISystem
             this.skills.RangeUlti = skills.ValueRO.RangeUlti;
             this.skills.Damage = skills.ValueRO.Damage; 
             _ultWasPressed = skills.ValueRO.UltiWasPpressed;
-           
         }
      
         if (_ultWasPressed) {
@@ -58,6 +63,8 @@ partial struct SkillsSystem : ISystem
             };
             physicsJob.ScheduleParallel();
         }
+
+        
         
     }
 

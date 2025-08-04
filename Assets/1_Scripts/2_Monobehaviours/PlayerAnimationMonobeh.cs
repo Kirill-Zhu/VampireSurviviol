@@ -28,7 +28,7 @@ public class PlayerAnimationMonobeh : MonoBehaviour
         _camera = Camera.main;
 
         //Set Values
-        transform.rotation = Quaternion.LookRotation(_playerInputs.RotationVector, Vector3.up);
+        //transform.rotation = Quaternion.LookRotation(_playerInputs.RotationVector, Vector3.up);
 
         _moveVector = _playerInputs.moveVector;
         //_moveVector.y = 0;

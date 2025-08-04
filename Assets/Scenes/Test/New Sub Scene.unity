@@ -1288,6 +1288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EntitiesReferencesAuthoring
   Zombie1Prefeb: {fileID: 1758607857275964206, guid: 4b03973c4287c7e44bd3a88fa76e71c0, type: 3}
   Zombie2Prefeb: {fileID: 1595863029604115164, guid: f395153735a1e0a4e9bfa29a0c499afb, type: 3}
+  Jumper: {fileID: 6008358632929190905, guid: b6a637bf9cb939e4c90a5804b5c9aff0, type: 3}
   ExpCystal: {fileID: 4668322918474917394, guid: 8d74cd0d3bacd6540827079080af4afc, type: 3}
 --- !u!114 &250006010
 MonoBehaviour:
@@ -2566,8 +2567,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 83096750525593891, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
+      propertyPath: Damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 83096750525593891, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: RateOfFire
-      value: 0.06
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 83096750525593891, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: ReloadTimer
@@ -2587,7 +2592,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3498091419751165202, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: Speed
-      value: 9.5
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498091419751165202, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
+      propertyPath: DashDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498091419751165202, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
+      propertyPath: DashWasPresed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5063632926773941307, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2595,7 +2608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5063632926773941307, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.68
+      value: 0.66
       objectReference: {fileID: 0}
     - target: {fileID: 5063632926773941307, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6034,6 +6047,51 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 49fee4c5907e33545a3b2db2e9d66675, type: 3}
+--- !u!1 &2094796343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2094796345}
+  - component: {fileID: 2094796344}
+  m_Layer: 0
+  m_Name: PauseComponent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2094796344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094796343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212bc33bc41799f41a5fc8a4058de29c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseComponentAuthoring
+  IsPaused: 0
+--- !u!4 &2094796345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094796343}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2095602217
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -70185,10 +70243,11 @@ MeshCollider:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1469578332}
-  - {fileID: 1185192702}
+  - {fileID: 2094796345}
   - {fileID: 250006008}
+  - {fileID: 1185192702}
   - {fileID: 127341805}
+  - {fileID: 1469578332}
   - {fileID: 677152588}
   - {fileID: 1895121013}
   - {fileID: 2130289376}

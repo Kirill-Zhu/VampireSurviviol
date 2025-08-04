@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3418380010727309628}
   - component: {fileID: -6683850662395168667}
   - component: {fileID: -3718195103397935501}
-  - component: {fileID: -1478736206153505038}
+  - component: {fileID: 1626833544301129313}
   m_Layer: 7
   m_Name: PlayerBullet
   m_TagString: Untagged
@@ -379,7 +379,7 @@ MonoBehaviour:
   Volume: 0
   SholdPlay: 0
   TypeOfCollisionClip: 0
---- !u!114 &-1478736206153505038
+--- !u!114 &1626833544301129313
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Physics.Custom::Unity.Physics.Authoring.PhysicsBodyAuthoring
   m_MotionType: 0
   m_Smoothing: 0
-  m_Mass: 1
+  m_Mass: 0.05
   m_LinearDamping: 0.01
   m_AngularDamping: 0.05
   m_InitialLinearVelocity:
@@ -404,7 +404,7 @@ MonoBehaviour:
     x: 0
     y: 0
     z: 0
-  m_GravityFactor: 1
+  m_GravityFactor: 0
   m_OverrideDefaultMassDistribution: 0
   m_CenterOfMass:
     x: 0
