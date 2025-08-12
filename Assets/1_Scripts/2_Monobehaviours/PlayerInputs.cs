@@ -135,8 +135,9 @@ public class PlayerInputs : MonoBehaviour
             unitMover.Rotation = rotation;
             }
 
-            //Dash 
-            if (DashAction.WasPressedThisFrame()) {
+            //Dash--------------------------------
+            
+            if (DashAction.WasPressedThisFrame()&&PlayerDashUIAuthoring.Instance.CanDash()) {
                 unitMover.DasWasPressed = true; //Disables in PlayerMover System
             }
             entityManager.SetComponentData(entityArray[i], unitMover);
@@ -167,8 +168,9 @@ public class PlayerInputs : MonoBehaviour
             Skills skills = skillsAray[i];
             skills.UltiWasPpressed = UltiWasPressed;
             entityManager.SetComponentData(entityArray[i], skills);
-            if (UltiWasPressed)
+            if (UltiWasPressed) {
                 UltiWasPressed = false;
+            }
         }
     }
 

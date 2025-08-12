@@ -40,7 +40,7 @@ public partial struct CollisionPlayerAndExpSystem : ISystem {
         jobHandle.Complete();
         while (collisionEventQueue.TryDequeue(out var collisionEvent)) {
 
-            UnityEngine.Debug.Log($"Collision between {collisionEvent.EntityA} and {collisionEvent.EntityA}"); 
+            //UnityEngine.Debug.Log($"Collision between {collisionEvent.EntityA} and {collisionEvent.EntityA}"); //Ёто работает 
         }
         collisionEventQueue.Dispose();
     }
@@ -91,7 +91,6 @@ public partial struct CollisionPlayerAndExpSystem : ISystem {
                     EntityB = collisionEvent.EntityB,
                     ImpactNormal = collisionEvent.Normal,
                   
-
                 };
                 // ƒобавл€ем событие в очередь
                 CollisionEvents.Enqueue(eventData);

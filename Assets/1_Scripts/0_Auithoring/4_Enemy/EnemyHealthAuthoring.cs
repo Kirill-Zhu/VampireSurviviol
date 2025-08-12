@@ -16,7 +16,7 @@ public struct EnemyHealth : IComponentData {
     public void DoDamage(int DamageValue) {
         Health -= DamageValue;
         if (Health <= 0) {
-
+            
         }
     }
 }

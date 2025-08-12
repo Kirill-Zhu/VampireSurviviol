@@ -5,6 +5,7 @@ public class SkillsAuthoring : MonoBehaviour
 {
     public float RangeUlti =10;
     public float PowerUlti = 10;
+    public float UltiReloadTime = 10;
     public int Damage = 15;
 
     public class Baker : Baker<SkillsAuthoring> {
@@ -13,6 +14,8 @@ public class SkillsAuthoring : MonoBehaviour
             AddComponent(entity, new Skills {
                 RangeUlti = authoring.RangeUlti,
                 PowerUlti = authoring.PowerUlti,
+                UltiReloadTime = authoring.UltiReloadTime,
+                UltiTimer = authoring.UltiReloadTime,
                 Damage = authoring.Damage
             });
         }
@@ -21,6 +24,9 @@ public class SkillsAuthoring : MonoBehaviour
 public struct Skills: IComponentData {
     public float RangeUlti;
     public float PowerUlti;
+    public float UltiReloadTime;
+    public float UltiTimer;
     public int Damage;
     public bool UltiWasPpressed;
+    
 }

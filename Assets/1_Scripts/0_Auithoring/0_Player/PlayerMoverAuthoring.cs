@@ -7,6 +7,7 @@ public class PlayerMoverAuthoring : MonoBehaviour {
     public float Speed;
     public float RotationSpeed;
     public float DashDistance;
+    public float DashReloadTime;
     public bool DashWasPresed;
     
     class Baker : Baker<PlayerMoverAuthoring> {
@@ -16,6 +17,8 @@ public class PlayerMoverAuthoring : MonoBehaviour {
                 MoveSpeed = authoring.Speed,
                 RotationSpeed = authoring.RotationSpeed,
                 DashDistance = authoring.DashDistance,
+                DashReloadTime = authoring.DashReloadTime,
+                DashTimer = authoring.DashReloadTime,
                 DasWasPressed = authoring.DashWasPresed,
             });
         }
@@ -27,5 +30,7 @@ public struct PlayerMover: IComponentData {
     public float3 InputTargetPosition;
     public float3 Rotation;
     public float DashDistance;
+    public float DashReloadTime;
+    public float DashTimer;
     public bool DasWasPressed;
 }

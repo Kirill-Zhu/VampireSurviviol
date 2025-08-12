@@ -5,7 +5,7 @@ public class SkillsMonobehAnimations : MonoBehaviour
     [SerializeField] private ParticleSystem[] _ulitParitcle;
     [SerializeField] private ParticleSystem[] _dashParticle;
     private void Update() {
-        if (PlayerInputs.Instance.UltiAction.WasPressedThisFrame()) {
+        if (PlayerInputs.Instance.UltiAction.WasPressedThisFrame()&&PlayerUltiUI.Instance.CanUlti()) {
             foreach (var particle in _ulitParitcle) { 
             particle.Play();
             }

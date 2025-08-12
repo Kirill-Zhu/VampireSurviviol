@@ -4,6 +4,7 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Transforms;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireMatchingQueriesForUpdate]
@@ -12,6 +13,7 @@ partial struct SkillsSystem : ISystem
     float3 playerPos;
     Skills skills;
     private bool _ultWasPressed;
+    private bool _canUlti;
  
 
     [BurstCompile]
@@ -27,24 +29,36 @@ partial struct SkillsSystem : ISystem
         if (pause.IsPaused)
             return;
 
-        //if (PlayerInputs.Instance.UltiAction.WasPressedThisFrame()) {
-        //Get Player Pos
-        foreach (RefRO<LocalTransform> localTransform
-            in
-            SystemAPI.Query<
-            RefRO<LocalTransform>
-            >().WithAll<PlayerInput>()) {
-            playerPos = localTransform.ValueRO.Position;
-        }
-        //// GetPlayer SKills
-        foreach (RefRO<Skills> skills in SystemAPI.Query<RefRO<Skills>>().WithAll<PlayerInput>()) {
-            this.skills.PowerUlti = skills.ValueRO.PowerUlti;
-            this.skills.RangeUlti = skills.ValueRO.RangeUlti;
-            this.skills.Damage = skills.ValueRO.Damage; 
+        foreach (RefRW<Skills> skills in SystemAPI.Query<RefRW<Skills>>().WithAll<PlayerInput>()) {
+
+            if (skills.ValueRO.UltiTimer < skills.ValueRO.UltiReloadTime) {
+                _canUlti = false;
+                skills.ValueRW.UltiTimer += SystemAPI.Time.DeltaTime;
+            } else
+                _canUlti = true;
             _ultWasPressed = skills.ValueRO.UltiWasPpressed;
         }
-     
-        if (_ultWasPressed) {
+      
+
+        if (_ultWasPressed&&_canUlti) {
+            //if (PlayerInputs.Instance.UltiAction.WasPressedThisFrame()) {
+            //Get Player Pos
+            Debug.Log("Ulti");
+            foreach (RefRO<LocalTransform> localTransform
+                in
+                SystemAPI.Query<
+                RefRO<LocalTransform>
+                >().WithAll<PlayerInput>()) {
+                playerPos = localTransform.ValueRO.Position;
+            }
+            //// GetPlayer SKills
+            foreach (RefRW<Skills> skills in SystemAPI.Query<RefRW<Skills>>().WithAll<PlayerInput>()) {
+                this.skills.PowerUlti = skills.ValueRO.PowerUlti;
+                this.skills.RangeUlti = skills.ValueRO.RangeUlti;
+                this.skills.Damage = skills.ValueRO.Damage;
+                skills.ValueRW.UltiTimer = 0;
+            }
+
             var ecbSingletone = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>();
             EntityCommandBuffer.ParallelWriter ecb = ecbSingletone.CreateCommandBuffer(state.WorldUnmanaged).AsParallelWriter();
             _ultWasPressed = false;
@@ -54,7 +68,6 @@ partial struct SkillsSystem : ISystem
                 skills = this.skills,
                 deltaTime = SystemAPI.Time.DeltaTime,
                 amountOfObjects = 0
-
             };
             ultiJob.ScheduleParallel();
             UltyPhysicsJob physicsJob = new UltyPhysicsJob() {
@@ -88,14 +101,16 @@ partial struct SkillsSystem : ISystem
         public void Execute([ChunkIndexInQuery] int sortKey, Entity entity, in LocalTransform localTransform, ref EnemyHealth enemyHealth) {
 
             float distance = math.distance(playerPos, localTransform.Position);
+            
             if ( distance < skills.RangeUlti) {
 
                 float3 direction = localTransform.Position - playerPos;
                 //physicsVelocity.Linear += math.normalize(direction) * skills.PowerUlti;
-                int intDistance = (int)distance;
-                if (intDistance <= 1)
-                    intDistance = 1;
-                enemyHealth.Health -= skills.Damage/intDistance;
+              
+                if (distance <= 1)
+                    distance = 1;
+                float damage = skills.Damage / distance;
+                enemyHealth.Health -= (int)damage;
                 Debug.Log("Enemy health is :"+ enemyHealth.Health);
                 if(enemyHealth.Health <= 0) 
                     ecb.AddComponent<DestroyTag>(sortKey, entity);
@@ -109,8 +124,13 @@ partial struct SkillsSystem : ISystem
         public float3 playerPos;
         public Skills skills;
         public void Execute(in LocalTransform localTransform, ref PhysicsVelocity physicsVelocity) {
-            float3 direction = localTransform.Position - playerPos;
-            physicsVelocity.Linear += math.normalize(direction) * skills.PowerUlti;
+              
+            float distance = math.distance(playerPos, localTransform.Position);
+            
+            if (distance < skills.RangeUlti) {
+                float3 direction = localTransform.Position - playerPos;
+                physicsVelocity.Linear += (math.normalize(direction) * skills.PowerUlti /distance);
+            }
         }
     }
 }

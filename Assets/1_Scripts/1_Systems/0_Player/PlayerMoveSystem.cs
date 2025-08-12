@@ -63,7 +63,10 @@ partial struct PlayerMoveSystem : ISystem
             PhysicsWorldSingleton physicsWorldSingleton = SystemAPI.GetSingleton<PhysicsWorldSingleton>();
             ColliderCastHit hit = new ColliderCastHit();
             //Dash
-            if (playerMover.ValueRO.DasWasPressed) {
+            if (playerMover.ValueRW.DashTimer < playerMover.ValueRO.DashReloadTime)
+                playerMover.ValueRW.DashTimer += SystemAPI.Time.DeltaTime;
+
+            if (playerMover.ValueRO.DasWasPressed&&playerMover.ValueRO.DashTimer>=playerMover.ValueRO.DashReloadTime) {
                 physicsWorldSingleton.SphereCast(localTransform.ValueRO.Position, 0.5f, localTransform.ValueRO.Forward(), playerMover.ValueRO.DashDistance,
               new CollisionFilter { BelongsTo = (uint)Layers.player, CollidesWith = (uint)Layers.Bounds }, QueryInteraction.IgnoreTriggers);
 
@@ -71,7 +74,7 @@ partial struct PlayerMoveSystem : ISystem
                     Debug.Log("No dash hit bounds");
                     localTransform.ValueRW.Position = localTransform.ValueRO.Position+ localTransform.ValueRO.Forward()*playerMover.ValueRO.DashDistance;
                 }
-
+                playerMover.ValueRW.DashTimer = 0;
                 playerMover.ValueRW.DasWasPressed = false;
             }
             //Gravity
