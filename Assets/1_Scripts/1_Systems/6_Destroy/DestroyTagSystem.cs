@@ -2,8 +2,7 @@ using Unity.Burst;
 using Unity.Entities;
 using Unity.Collections;
 using Unity.Transforms;
-using Unity.Mathematics;
-using UnityEngine;
+
 [UpdateInGroup(typeof(LateSimulationSystemGroup))]
 partial struct DestroyTagSystem : ISystem
 {

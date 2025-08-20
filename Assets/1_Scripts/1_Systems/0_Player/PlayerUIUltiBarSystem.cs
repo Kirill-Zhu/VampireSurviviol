@@ -1,6 +1,4 @@
-using Unity.Burst;
 using Unity.Entities;
-using UnityEngine;
 
 partial class PlayerUIUltiBarSystem : SystemBase {
 

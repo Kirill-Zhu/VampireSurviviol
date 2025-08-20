@@ -1,7 +1,6 @@
 using Unity.Burst;
 using Unity.Entities;
 using UnityEngine;        
-using Unity.Physics;
 using Unity.Physics.Systems;
 
 partial struct WorldPauseSystem : ISystem
@@ -14,7 +13,6 @@ partial struct WorldPauseSystem : ISystem
 
     public void OnUpdate(ref SystemState state) {
         if (Input.GetKeyDown(KeyCode.P)) {
-         
 
             foreach (var pauseComponent in SystemAPI.Query<RefRW<PauseComponent>>()) { 
              

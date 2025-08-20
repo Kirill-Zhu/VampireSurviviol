@@ -1,8 +1,6 @@
-
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
-using Unity.Jobs;
 using Unity.Transforms;
 
 
@@ -43,6 +41,10 @@ partial struct BulletSystem : ISystem {
 
         ecb.Playback(state.EntityManager);
     }
+    [BurstCompile]
+    public void OnDestroy(ref SystemState state) {
+
+    }
 
     public partial struct BulletMoverJob : IJobEntity {
         public float deltaTime;
@@ -53,9 +55,6 @@ partial struct BulletSystem : ISystem {
             localTransform.Position += localTransform.Forward() * bullet.Speed * deltaTime;
             bullet.Timer += deltaTime;
         }
-        [BurstCompile]
-        public void OnDestroy(ref SystemState state) {
-
-        }
+       
     }
 }

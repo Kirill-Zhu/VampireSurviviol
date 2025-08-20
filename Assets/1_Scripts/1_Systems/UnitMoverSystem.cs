@@ -2,17 +2,16 @@ using Unity.Entities;
 using Unity.Transforms;
 using Unity.Physics;
 using Unity.Mathematics;
-
 using Unity.Burst;
-using System.Diagnostics;
+
 partial struct UnitMoverSystem : ISystem
 {
     float3 playerPos;
     [BurstCompile]
    public void OnUpdate(ref SystemState state) {
 
-        var pause = SystemAPI.GetSingleton<PauseComponent>();
-        if (pause.IsPaused)
+        SystemAPI.TryGetSingleton<PauseComponent>(out var pause);
+        if (pause!.IsPaused)
             return;
 
         //Get Player Pos

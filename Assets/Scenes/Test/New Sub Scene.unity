@@ -919,117 +919,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 6780ac7fd67c9ab43aebe63ff3fb60aa, type: 3}
---- !u!1 &204236232
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 204236233}
-  - component: {fileID: 204236236}
-  - component: {fileID: 204236235}
-  - component: {fileID: 204236234}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &204236233
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204236232}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.08, y: 2.51, z: 24.92}
-  m_LocalScale: {x: 2.8931534, y: 3.6652, z: 7.5729}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2130289376}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &204236234
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204236232}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &204236235
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204236232}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &204236236
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204236232}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &223954627
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1128,6 +1017,37 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 6780ac7fd67c9ab43aebe63ff3fb60aa, type: 3}
+--- !u!1 &235026031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 235026032}
+  m_Layer: 0
+  m_Name: PosCheckMarker
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &235026032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235026031}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10, y: 15, z: -15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &239040064
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1257,7 +1177,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c698a7c7d830c7249b061a2dd451791d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerAuthoring
-  SpawnPos: {x: 0, y: 3, z: 0}
+  SpawnPosArray:
+  - {x: -10, y: 15, z: -15}
+  - {x: -12, y: 20, z: -30}
+  - {x: -10, y: 13, z: -40}
+  - {x: -25, y: 30, z: -40}
+  - {x: -40, y: 12, z: -40}
+  - {x: -40, y: 30, z: -9}
+  - {x: -85, y: 12, z: -25}
+  - {x: -70, y: 23, z: -40}
+  - {x: -100, y: 30, z: -40}
 --- !u!4 &250006008
 Transform:
   m_ObjectHideFlags: 0
@@ -2571,7 +2500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 83096750525593891, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: RateOfFire
-      value: 0.17
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 83096750525593891, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: ReloadTimer
@@ -2579,19 +2508,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2519359602801868215, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: Damage
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2519359602801868215, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: PowerUlti
-      value: 44
+      value: 88
       objectReference: {fileID: 0}
     - target: {fileID: 2519359602801868215, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: RangeUlti
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2519359602801868215, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: UltiReloadTime
-      value: 0
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2640426621530714569, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: m_Name
@@ -2599,7 +2528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3498091419751165202, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: Speed
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3498091419751165202, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: DashDistance
@@ -2611,7 +2540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3498091419751165202, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: DashReloadTime
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5063632926773941307, guid: 2900529457603624dbcf7d2369b6596e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3856,7 +3785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerExpAuthoring
   Lvl: 1
-  Exp: 0
+  Exp: 11111111
 --- !u!54 &1184096550
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4441,63 +4370,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: c89ff10cad1be9a4e83cf49bf466e148, type: 3}
---- !u!1001 &1469578332
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3994990359948163895, guid: d56171ba6446fc94fb0ef8ce9b7bfb83, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994990359948163895, guid: d56171ba6446fc94fb0ef8ce9b7bfb83, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994990359948163895, guid: d56171ba6446fc94fb0ef8ce9b7bfb83, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994990359948163895, guid: d56171ba6446fc94fb0ef8ce9b7bfb83, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994990359948163895, guid: d56171ba6446fc94fb0ef8ce9b7bfb83, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994990359948163895, guid: d56171ba6446fc94fb0ef8ce9b7bfb83, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994990359948163895, guid: d56171ba6446fc94fb0ef8ce9b7bfb83, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994990359948163895, guid: d56171ba6446fc94fb0ef8ce9b7bfb83, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994990359948163895, guid: d56171ba6446fc94fb0ef8ce9b7bfb83, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994990359948163895, guid: d56171ba6446fc94fb0ef8ce9b7bfb83, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8270454017768629138, guid: d56171ba6446fc94fb0ef8ce9b7bfb83, type: 3}
-      propertyPath: m_Name
-      value: PlayerBullet
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d56171ba6446fc94fb0ef8ce9b7bfb83, type: 3}
 --- !u!1 &1547630591
 GameObject:
   m_ObjectHideFlags: 0
@@ -6392,7 +6264,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 288481412}
-  - {fileID: 204236233}
   - {fileID: 4680285825375713860}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6654,6 +6525,7 @@ GameObject:
   - component: {fileID: 5200225150058757}
   - component: {fileID: 361532090}
   - component: {fileID: 361532089}
+  - component: {fileID: 5200225152484326}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color01 (6)
   m_TagString: Untagged
@@ -6669,13 +6541,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5200225152065477}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.124864236, y: -0.7018937, z: -0.18098173, w: 0.6774953}
-  m_LocalPosition: {x: -98.41784, y: -295.09866, z: 61.108765}
+  m_LocalRotation: {x: -0.12486422, y: -0.7018936, z: -0.1809817, w: 0.67749524}
+  m_LocalPosition: {x: -98.41784, y: -304.7988, z: 61.108795}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5200225152484326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5200225152065477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &17457303587327982
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6999,8 +6883,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68486335767132476}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000013465252, y: 1, z: -0, w: 0.000001496431}
-  m_LocalPosition: {x: 2.2169385, y: 0.20867157, z: -32.1888}
+  m_LocalRotation: {x: 0.000000016870372, y: 1, z: -0.0000000037252899, w: 0.0000014815507}
+  m_LocalPosition: {x: 2.2169385, y: 0.20867193, z: -32.1888}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7019,6 +6903,7 @@ GameObject:
   - component: {fileID: 68486335769126908}
   - component: {fileID: 223954628}
   - component: {fileID: 223954627}
+  - component: {fileID: 68486335769126909}
   m_Layer: 0
   m_Name: Vehicle_SUV_color01 (4)
   m_TagString: Untagged
@@ -7082,6 +6967,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &68486335769126909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68486335767132476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &74827192836168234
 GameObject:
   m_ObjectHideFlags: 0
@@ -8043,6 +7940,7 @@ GameObject:
   - component: {fileID: 197396899765032065}
   - component: {fileID: 1126562312}
   - component: {fileID: 1126562311}
+  - component: {fileID: 197396899767457378}
   m_Layer: 0
   m_Name: Vehicle_Car_color03 (1)
   m_TagString: Untagged
@@ -8058,13 +7956,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197396899767028289}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000013345925, y: 0.70707536, z: 0.00000003678724, w: 0.70713824}
-  m_LocalPosition: {x: -41.87128, y: 0.20363593, z: 40.513935}
+  m_LocalRotation: {x: -0.00000001680857, y: 0.7070758, z: 0.0000000144355, w: 0.7071378}
+  m_LocalPosition: {x: -41.87128, y: 0.20363557, z: 40.513935}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &197396899767457378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197396899767028289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &242703787730655062
 Transform:
   m_ObjectHideFlags: 0
@@ -8136,7 +8046,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255638237627049723}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000008234352, y: -0.70709074, z: 0.00000005308539, w: 0.70712286}
+  m_LocalRotation: {x: 0.000000029128339, y: -0.70709074, z: -0.000000018160792, w: 0.70712286}
   m_LocalPosition: {x: -68.00049, y: 1.0006067, z: -13.248072}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8156,6 +8066,7 @@ GameObject:
   - component: {fileID: 255638237629315131}
   - component: {fileID: 666323734}
   - component: {fileID: 666323733}
+  - component: {fileID: 255638237630413564}
   m_Layer: 0
   m_Name: Vehicle_Taxi (9)
   m_TagString: Untagged
@@ -8219,6 +8130,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255638237627049723}
   m_Mesh: {fileID: 4300000, guid: a7419a75ac6929e48842c0470aa44718, type: 3}
+--- !u!114 &255638237630413564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255638237627049723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &260882706082730903
 Transform:
   m_ObjectHideFlags: 0
@@ -8999,7 +8922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371700818630267215}
   serializedVersion: 2
-  m_LocalRotation: {x: -8.749197e-10, y: 0.7071026, z: 0.000000033527613, w: 0.70711094}
+  m_LocalRotation: {x: -8.749481e-10, y: 0.7071026, z: 0.000000026077032, w: 0.70711094}
   m_LocalPosition: {x: 51.210503, y: 0.20867217, z: 39.854523}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9019,6 +8942,7 @@ GameObject:
   - component: {fileID: 371700818628267919}
   - component: {fileID: 1906332629}
   - component: {fileID: 1906332628}
+  - component: {fileID: 371700818630267216}
   m_Layer: 0
   m_Name: Vehicle_SUV_color01
   m_TagString: Untagged
@@ -9026,6 +8950,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &371700818630267216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371700818630267215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &390705065462117651
 Transform:
   m_ObjectHideFlags: 0
@@ -9491,8 +9427,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431271105344820196}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.12224503, y: -0.00005008871, z: 0.99249995, w: -0.000015318145}
-  m_LocalPosition: {x: 61.40267, y: 3.1916199, z: 88.702965}
+  m_LocalRotation: {x: -0.122246444, y: 0.0000009177729, z: 0.9924998, w: 0.00000031592208}
+  m_LocalPosition: {x: 61.402767, y: 3.191606, z: 88.70277}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9511,6 +9447,7 @@ GameObject:
   - component: {fileID: 431271105342557476}
   - component: {fileID: 1659754104}
   - component: {fileID: 1659754103}
+  - component: {fileID: 431271105344820197}
   m_Layer: 0
   m_Name: Vehicle_Car_color01 (2)
   m_TagString: Untagged
@@ -9518,6 +9455,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &431271105344820197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431271105344820196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &436083978057015439
 GameObject:
   m_ObjectHideFlags: 0
@@ -9531,6 +9480,7 @@ GameObject:
   - component: {fileID: 436083978058956367}
   - component: {fileID: 872473003}
   - component: {fileID: 872473002}
+  - component: {fileID: 436083978058956368}
   m_Layer: 0
   m_Name: Vehicle_Police Car (3)
   m_TagString: Untagged
@@ -9546,8 +9496,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436083978057015439}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000003414871, y: -0.70598495, z: -0.00000013830139, w: 0.70822686}
-  m_LocalPosition: {x: -107.29512, y: 0.2036215, z: -113.03381}
+  m_LocalRotation: {x: 0.00000001661037, y: -0.7059847, z: 0.0000000135041756, w: 0.7082271}
+  m_LocalPosition: {x: -107.29512, y: 0.20362139, z: -113.03381}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9609,6 +9559,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &436083978058956368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436083978057015439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &449517681526057342
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9874,6 +9836,7 @@ GameObject:
   - component: {fileID: 496508250156608203}
   - component: {fileID: 367590671}
   - component: {fileID: 367590670}
+  - component: {fileID: 496508250157737996}
   m_Layer: 0
   m_Name: Vehicle_Ambulance (3)
   m_TagString: Untagged
@@ -9889,8 +9852,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496508250154349579}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000014454041, y: 0.0000042373326, z: -0.00000015848057, w: 1}
-  m_LocalPosition: {x: 128.74078, y: 0.20013869, z: 24.3538}
+  m_LocalRotation: {x: -0.0000000063846484, y: 0.0000060734865, z: 0.000000018503327, w: 1}
+  m_LocalPosition: {x: 128.74078, y: 0.20013869, z: 24.353798}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9952,6 +9915,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496508250154349579}
   m_Mesh: {fileID: 4300000, guid: ca65f40fba8c4d146800611d34e2e114, type: 3}
+--- !u!114 &496508250157737996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496508250154349579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &498652532991814002
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10149,8 +10124,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506732800508699981}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.45017818, y: 0.8866411, z: 0.10258966, w: -0.026125878}
-  m_LocalPosition: {x: 83.443794, y: -299.39725, z: 56.560253}
+  m_LocalRotation: {x: 0.45017782, y: 0.8866413, z: 0.10258968, w: -0.02612588}
+  m_LocalPosition: {x: 83.443794, y: -309.09714, z: 56.560253}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10169,6 +10144,7 @@ GameObject:
   - component: {fileID: 506732800510966669}
   - component: {fileID: 2095602218}
   - component: {fileID: 2095602217}
+  - component: {fileID: 506732800510966670}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color01 (8)
   m_TagString: Untagged
@@ -10232,6 +10208,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &506732800510966670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506732800508699981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!23 &511341708278691781
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10301,6 +10289,7 @@ GameObject:
   - component: {fileID: 511341708278691781}
   - component: {fileID: 1064686076}
   - component: {fileID: 1064686075}
+  - component: {fileID: 511341708281115942}
   m_Layer: 0
   m_Name: Vehicle_Container_color03 (1)
   m_TagString: Untagged
@@ -10316,13 +10305,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511341708280621317}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000006028221, y: 0.9999962, z: 0.0000000372529, w: 0.002764615}
+  m_LocalRotation: {x: 0.000000030937368, y: 0.9999962, z: 0.000000014901159, w: 0.0027646048}
   m_LocalPosition: {x: 90.32342, y: 1.0083253, z: -100.02714}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &511341708281115942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511341708280621317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &515784841397093318
 GameObject:
   m_ObjectHideFlags: 0
@@ -11950,6 +11951,7 @@ GameObject:
   - component: {fileID: 725992122168321218}
   - component: {fileID: 1054006532}
   - component: {fileID: 1054006531}
+  - component: {fileID: 725992122170615331}
   m_Layer: 0
   m_Name: Vehicle_Taxi (2)
   m_TagString: Untagged
@@ -11965,13 +11967,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725992122170325506}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0000002320855, y: 0.7071091, z: 0.000000117346644, w: 0.70710444}
-  m_LocalPosition: {x: 24.499899, y: 0.2006067, z: -0.34873343}
+  m_LocalRotation: {x: -0.000000012166631, y: 0.7071092, z: 0.000000018160792, w: 0.70710444}
+  m_LocalPosition: {x: 24.499899, y: 0.2006067, z: -0.34873334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &725992122170615331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725992122170325506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &727093047111776003
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12494,7 +12508,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793140544532905847}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000011552936, y: 0.9999996, z: 0.000000110827386, w: 0.000920771}
+  m_LocalRotation: {x: -0.000000010168492, y: 0.9999996, z: 0.00000002142042, w: 0.0009207702}
   m_LocalPosition: {x: 97.62556, y: 1.0006067, z: -15.253448}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12514,6 +12528,7 @@ GameObject:
   - component: {fileID: 793140544534831543}
   - component: {fileID: 144405759}
   - component: {fileID: 144405758}
+  - component: {fileID: 793140544534831544}
   m_Layer: 0
   m_Name: Vehicle_Taxi (8)
   m_TagString: Untagged
@@ -12577,6 +12592,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &793140544534831544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793140544532905847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &796222489495798462
 Transform:
   m_ObjectHideFlags: 0
@@ -13128,8 +13155,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849908997484720224}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.2660974, y: 0.91648513, z: 0.1155531, w: -0.27548996}
-  m_LocalPosition: {x: -28.145697, y: -296.85565, z: 61.865353}
+  m_LocalRotation: {x: -0.26609725, y: 0.91648525, z: 0.11555311, w: -0.2754898}
+  m_LocalPosition: {x: -28.145697, y: -306.5558, z: 61.865353}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13148,6 +13175,7 @@ GameObject:
   - component: {fileID: 849908997482786464}
   - component: {fileID: 707491189}
   - component: {fileID: 707491188}
+  - component: {fileID: 849908997484720225}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color03 (3)
   m_TagString: Untagged
@@ -13155,6 +13183,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &849908997484720225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849908997484720224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &867942844131268526
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13287,6 +13327,7 @@ GameObject:
   - component: {fileID: 920925812285255680}
   - component: {fileID: 891415662}
   - component: {fileID: 891415661}
+  - component: {fileID: 920925812287681249}
   m_Layer: 0
   m_Name: Vehicle_Car_color02 (4)
   m_TagString: Untagged
@@ -13302,13 +13343,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920925812287516352}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.052885655, y: -0.7122721, z: -0.05336905, w: 0.6978706}
-  m_LocalPosition: {x: 106.92483, y: 0.8054099, z: -93.87274}
+  m_LocalRotation: {x: -0.052828822, y: -0.71225846, z: -0.053903185, w: 0.6978477}
+  m_LocalPosition: {x: 106.92498, y: 0.8057038, z: -93.8727}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &920925812287681249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920925812287516352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &930604356285799517
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13637,6 +13690,7 @@ GameObject:
   - component: {fileID: 983965135848698198}
   - component: {fileID: 650582933}
   - component: {fileID: 650582932}
+  - component: {fileID: 983965135849665431}
   m_Layer: 0
   m_Name: Vehicle_Taxi (11)
   m_TagString: Untagged
@@ -13652,8 +13706,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983965135846764438}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000016846397, y: -0.70918095, z: 0.000000115018345, w: 0.70502657}
-  m_LocalPosition: {x: -84.507416, y: 1.0006063, z: 83.239296}
+  m_LocalRotation: {x: 0.000000024162292, y: -0.7091807, z: -0.000000027939679, w: 0.7050268}
+  m_LocalPosition: {x: -84.507416, y: 1.0006069, z: 83.239296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13715,6 +13769,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983965135846764438}
   m_Mesh: {fileID: 4300000, guid: a7419a75ac6929e48842c0470aa44718, type: 3}
+--- !u!114 &983965135849665431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983965135846764438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &986684849837872494
 Transform:
   m_ObjectHideFlags: 0
@@ -13854,6 +13920,7 @@ GameObject:
   - component: {fileID: 994475743787422325}
   - component: {fileID: 1668808972}
   - component: {fileID: 1668808971}
+  - component: {fileID: 994475743787422326}
   m_Layer: 0
   m_Name: Vehicle_SUV_color03 (3)
   m_TagString: Untagged
@@ -13869,8 +13936,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994475743785487541}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000010827119, y: -0.0000017063835, z: 0.0000005304401, w: 1}
-  m_LocalPosition: {x: -111.11467, y: 0.20867217, z: 75.73817}
+  m_LocalRotation: {x: 0.0000000034844612, y: -0.0000016924323, z: 0.00000001913058, w: 1}
+  m_LocalPosition: {x: -111.11467, y: 0.20867193, z: 75.73817}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13932,6 +13999,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &994475743787422326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994475743785487541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &997812485711060667
 Transform:
   m_ObjectHideFlags: 0
@@ -14066,8 +14145,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002587711733037027}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000054980482, y: -0.011432129, z: 0.000000036685375, w: 0.9999347}
-  m_LocalPosition: {x: 29.884369, y: 1.0051644, z: -130.40666}
+  m_LocalRotation: {x: 0.000000017704423, y: -0.011433299, z: 0.000000029394869, w: 0.9999347}
+  m_LocalPosition: {x: 29.884354, y: 1.0051647, z: -130.40666}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14086,6 +14165,7 @@ GameObject:
   - component: {fileID: 1002587711735228707}
   - component: {fileID: 460439780}
   - component: {fileID: 460439779}
+  - component: {fileID: 1002587711736327140}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color02 (6)
   m_TagString: Untagged
@@ -14149,6 +14229,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002587711733037027}
   m_Mesh: {fileID: 4300000, guid: 6780ac7fd67c9ab43aebe63ff3fb60aa, type: 3}
+--- !u!114 &1002587711736327140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002587711733037027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!23 &1015884344780995129
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14213,8 +14305,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015884344783250681}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.42006147, y: -0.8769938, z: -0.12132492, w: -0.19927524}
-  m_LocalPosition: {x: 77.37064, y: -308.71326, z: 82.276695}
+  m_LocalRotation: {x: 0.42006135, y: -0.8769938, z: -0.12132491, w: -0.19927515}
+  m_LocalPosition: {x: 77.37064, y: -318.41357, z: 82.276634}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14233,6 +14325,7 @@ GameObject:
   - component: {fileID: 1015884344780995129}
   - component: {fileID: 1265949355}
   - component: {fileID: 1265949354}
+  - component: {fileID: 1015884344783250682}
   m_Layer: 0
   m_Name: Vehicle_SUV_color03 (6)
   m_TagString: Untagged
@@ -14240,6 +14333,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1015884344783250682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015884344783250681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &1029968643436485861
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14687,6 +14792,7 @@ GameObject:
   - component: {fileID: 1077958744027680735}
   - component: {fileID: 1870307878}
   - component: {fileID: 1870307877}
+  - component: {fileID: 1077958744029973824}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color02 (1)
   m_TagString: Untagged
@@ -14702,13 +14808,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077958744029614367}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000108986896, y: -0.7071033, z: 0.000000038649887, w: 0.70711035}
-  m_LocalPosition: {x: 68, y: 0.20516515, z: 46.704433}
+  m_LocalRotation: {x: -0.0000000035907561, y: -0.7071031, z: 0.000000030267984, w: 0.7071106}
+  m_LocalPosition: {x: 68, y: 0.20516503, z: 46.704433}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1077958744029973824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077958744029614367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &1090770226004088971
 Transform:
   m_ObjectHideFlags: 0
@@ -15557,6 +15675,7 @@ GameObject:
   - component: {fileID: 1164334094390166947}
   - component: {fileID: 360406401}
   - component: {fileID: 360406400}
+  - component: {fileID: 1164334094392592196}
   m_Layer: 0
   m_Name: Vehicle_Police Car (4)
   m_TagString: Untagged
@@ -15572,13 +15691,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164334094392367971}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000011827544, y: 0.00070145057, z: 0.000000015144904, w: 0.9999998}
-  m_LocalPosition: {x: -111.09569, y: 0.20362067, z: 22.122341}
+  m_LocalRotation: {x: 2.2875477e-10, y: 0.00069925474, z: -0.0000000028821883, w: 0.9999998}
+  m_LocalPosition: {x: -111.09569, y: 0.20362067, z: 22.122334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1164334094392592196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164334094392367971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &1170066697224809892
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15837,6 +15968,7 @@ GameObject:
   - component: {fileID: 1206180462755222746}
   - component: {fileID: 492202696}
   - component: {fileID: 492202695}
+  - component: {fileID: 1206180462757647931}
   m_Layer: 0
   m_Name: Vehicle_Bus_color01
   m_TagString: Untagged
@@ -15852,13 +15984,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206180462757153306}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000018669452, y: 0.7071416, z: -0.00000018207356, w: 0.707072}
-  m_LocalPosition: {x: -96.578026, y: 0.20505583, z: -120.02862}
+  m_LocalRotation: {x: -0.0000000014231913, y: 0.7071416, z: 0.00000002617162, w: 0.707072}
+  m_LocalPosition: {x: -96.578026, y: 0.20505571, z: -120.02862}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1206180462757647931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206180462757153306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &1206544671712628529
 Transform:
   m_ObjectHideFlags: 0
@@ -16049,8 +16193,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231462179327671965}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000017063497, y: 0.9404704, z: -0.0000000023283062, w: -0.3398756}
-  m_LocalPosition: {x: 120.29236, y: 0.20363605, z: -22.238165}
+  m_LocalRotation: {x: -0.0000000013740191, y: 0.9404704, z: 0.0000000023283064, w: -0.33987573}
+  m_LocalPosition: {x: 120.29236, y: 0.20363593, z: -22.238165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16069,6 +16213,7 @@ GameObject:
   - component: {fileID: 1231462179325468765}
   - component: {fileID: 24559288}
   - component: {fileID: 24559287}
+  - component: {fileID: 1231462179327671966}
   m_Layer: 0
   m_Name: Vehicle_Car_color03 (3)
   m_TagString: Untagged
@@ -16076,6 +16221,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1231462179327671966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231462179327671965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &1255226679845323311
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16266,8 +16423,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276064571695940217}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000005860897, y: 0.7071101, z: -0.000000048428767, w: 0.7071035}
-  m_LocalPosition: {x: -64.40951, y: 0.20013916, z: 0.14793193}
+  m_LocalRotation: {x: 0.000000003186301, y: 0.7071097, z: 0.000000018626451, w: 0.70710397}
+  m_LocalPosition: {x: -64.40951, y: 0.20013869, z: 0.147933}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16286,6 +16443,7 @@ GameObject:
   - component: {fileID: 1276064571693948089}
   - component: {fileID: 13702679}
   - component: {fileID: 13702678}
+  - component: {fileID: 1276064571695940218}
   m_Layer: 0
   m_Name: Vehicle_Ambulance (1)
   m_TagString: Untagged
@@ -16293,6 +16451,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1276064571695940218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276064571695940217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &1287150926570450669
 GameObject:
   m_ObjectHideFlags: 0
@@ -17208,6 +17378,7 @@ GameObject:
   - component: {fileID: 1378869946706662690}
   - component: {fileID: 1650039075}
   - component: {fileID: 1650039074}
+  - component: {fileID: 1378869946707662819}
   m_Layer: 0
   m_Name: Vehicle_Car_color02 (1)
   m_TagString: Untagged
@@ -17223,7 +17394,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378869946704661474}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000010830256, y: -0.7071067, z: -0.000000004656613, w: 0.7071069}
+  m_LocalRotation: {x: -0.000000028205115, y: -0.70710665, z: -0.000000014901161, w: 0.70710695}
   m_LocalPosition: {x: 116.09989, y: 0.20363629, z: 6.851257}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17286,6 +17457,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378869946704661474}
   m_Mesh: {fileID: 4300000, guid: 49fee4c5907e33545a3b2db2e9d66675, type: 3}
+--- !u!114 &1378869946707662819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378869946704661474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &1384715532188071289
 GameObject:
   m_ObjectHideFlags: 0
@@ -18300,6 +18483,7 @@ GameObject:
   - component: {fileID: 1530427542640031965}
   - component: {fileID: 425434265}
   - component: {fileID: 425434264}
+  - component: {fileID: 1530427542642457150}
   m_Layer: 0
   m_Name: Vehicle_SUV_color01 (8)
   m_TagString: Untagged
@@ -18315,13 +18499,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530427542642288157}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000009234718, y: 0.9998444, z: 0.000000026077032, w: -0.017645124}
+  m_LocalRotation: {x: 0.000000019698462, y: 0.9998444, z: 0.000000018626451, w: -0.017645136}
   m_LocalPosition: {x: -13.485564, y: 1.0086718, z: 92.604836}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1530427542642457150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530427542642288157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!95 &1543901651625616236
 Animator:
   serializedVersion: 7
@@ -18479,8 +18675,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579246848517236291}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000005931354, y: -0.7071073, z: -0.000000048894428, w: 0.7071063}
-  m_LocalPosition: {x: 64.69989, y: 0.20516491, z: -113.94876}
+  m_LocalRotation: {x: -0.000000016318735, y: -0.70710707, z: 0.000000014435498, w: 0.70710653}
+  m_LocalPosition: {x: 64.69989, y: 0.20516503, z: -113.94876}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18499,6 +18695,7 @@ GameObject:
   - component: {fileID: 1579246848519239811}
   - component: {fileID: 1574687290}
   - component: {fileID: 1574687289}
+  - component: {fileID: 1579246848520337988}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color01 (2)
   m_TagString: Untagged
@@ -18562,6 +18759,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579246848517236291}
   m_Mesh: {fileID: 4300000, guid: 6780ac7fd67c9ab43aebe63ff3fb60aa, type: 3}
+--- !u!114 &1579246848520337988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579246848517236291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &1629699344292993672
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -19649,6 +19858,7 @@ GameObject:
   - component: {fileID: 1824683624136150699}
   - component: {fileID: 922542564}
   - component: {fileID: 922542563}
+  - component: {fileID: 1824683624138443852}
   m_Layer: 0
   m_Name: Vehicle_SUV_color03 (2)
   m_TagString: Untagged
@@ -19664,13 +19874,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824683624138084459}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0000000037249777, y: -0.7071088, z: 0.00000014156103, w: 0.70710474}
-  m_LocalPosition: {x: -36.500076, y: 0.20867205, z: -113.24874}
+  m_LocalRotation: {x: 0.0000000018617428, y: -0.7071088, z: 0.000000027939677, w: 0.70710474}
+  m_LocalPosition: {x: -36.500076, y: 0.20867181, z: -113.24874}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1824683624138443852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824683624138084459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &1850670056825542018
 GameObject:
   m_ObjectHideFlags: 0
@@ -21345,6 +21567,7 @@ GameObject:
   - component: {fileID: 2183068749927244292}
   - component: {fileID: 186188441}
   - component: {fileID: 186188440}
+  - component: {fileID: 2183068749928210629}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color03 (2)
   m_TagString: Untagged
@@ -21360,8 +21583,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2183068749925055684}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000024697897, y: 0.9999989, z: -0.000000144355, w: 0.0014553398}
-  m_LocalPosition: {x: 59.507835, y: 1.0051668, z: 55.783714}
+  m_LocalRotation: {x: 0.000000024145873, y: 0.9999989, z: 0.00000003445893, w: 0.0014553308}
+  m_LocalPosition: {x: 59.507805, y: 1.0051658, z: 55.783714}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21423,6 +21646,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2183068749925055684}
   m_Mesh: {fileID: 4300000, guid: 6780ac7fd67c9ab43aebe63ff3fb60aa, type: 3}
+--- !u!114 &2183068749928210629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2183068749925055684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &2201597842821126818
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22122,6 +22357,7 @@ GameObject:
   - component: {fileID: 2320243758278503550}
   - component: {fileID: 535960244}
   - component: {fileID: 535960243}
+  - component: {fileID: 2320243758280797855}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color01 (5)
   m_TagString: Untagged
@@ -22137,13 +22373,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2320243758280700606}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000006231934, y: 0.70986617, z: 0.000000047963105, w: 0.7043366}
-  m_LocalPosition: {x: -101.34211, y: 1.0051646, z: -13.601584}
+  m_LocalRotation: {x: 0.000000027091119, y: 0.70986545, z: 0.000000029802322, w: 0.7043374}
+  m_LocalPosition: {x: -101.34211, y: 1.0051649, z: -13.601587}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2320243758280797855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320243758280700606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &2324450435375470749
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22341,8 +22589,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2338704012943299127}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000045816698, y: 0.7071074, z: 0.000000059604638, w: 0.70710623}
-  m_LocalPosition: {x: 53.85352, y: 0.20832443, z: 0.39750218}
+  m_LocalRotation: {x: 0.00000006508435, y: 0.7071069, z: 0.000000037252903, w: 0.70710677}
+  m_LocalPosition: {x: 53.85352, y: 0.20832515, z: 0.39750454}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22361,6 +22609,7 @@ GameObject:
   - component: {fileID: 2338704012945558775}
   - component: {fileID: 1676300882}
   - component: {fileID: 1676300881}
+  - component: {fileID: 2338704012946689592}
   m_Layer: 0
   m_Name: Vehicle_Container_color01
   m_TagString: Untagged
@@ -22424,6 +22673,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2338704012943299127}
   m_Mesh: {fileID: 4300000, guid: af2166692e99625489131a7bf2114bd6, type: 3}
+--- !u!114 &2338704012946689592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2338704012943299127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &2350799313900156800
 GameObject:
   m_ObjectHideFlags: 0
@@ -22496,7 +22757,7 @@ Transform:
   m_GameObject: {fileID: 2371936515140765612}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000000050023587, y: -0.7071069, z: -0.0000000018626451, w: 0.70710665}
-  m_LocalPosition: {x: 11.13, y: 0.21, z: 6.83}
+  m_LocalPosition: {x: 4.13, y: 0.21, z: 10.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22797,6 +23058,7 @@ GameObject:
   - component: {fileID: 2372015817803115819}
   - component: {fileID: 2005987562}
   - component: {fileID: 2005987561}
+  - component: {fileID: 2372015817805410252}
   m_Layer: 0
   m_Name: Vehicle_Taxi (7)
   m_TagString: Untagged
@@ -22812,13 +23074,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2372015817805116395}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000091488664, y: 1, z: -0.00000039301813, w: 0.0000018333286}
-  m_LocalPosition: {x: -118.00662, y: 0.2006067, z: 64.468544}
+  m_LocalRotation: {x: -3.7762504e-10, y: 1, z: 9.313226e-10, w: 0.000001834095}
+  m_LocalPosition: {x: -118.00662, y: 0.20060658, z: 64.468544}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2372015817805410252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372015817805116395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &2374757000506177772
 GameObject:
   m_ObjectHideFlags: 0
@@ -25007,6 +25281,7 @@ GameObject:
   - component: {fileID: 2745313525939458873}
   - component: {fileID: 1926657923}
   - component: {fileID: 1926657922}
+  - component: {fileID: 2745313525939458874}
   m_Layer: 0
   m_Name: Vehicle_Police Car (2)
   m_TagString: Untagged
@@ -25022,8 +25297,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2745313525937262073}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000014745503, y: -0.70635855, z: -0.00000016018748, w: 0.70785433}
-  m_LocalPosition: {x: 6.7997904, y: 0.20362127, z: -52.74245}
+  m_LocalRotation: {x: -0.0000000010654304, y: -0.70635873, z: -0.0000000027939677, w: 0.70785415}
+  m_LocalPosition: {x: 6.7997904, y: 0.20362115, z: -52.74245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25085,6 +25360,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2745313525939458874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2745313525937262073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &2747375806971482512
 GameObject:
   m_ObjectHideFlags: 0
@@ -26775,6 +27062,7 @@ GameObject:
   - component: {fileID: 2964729799292032260}
   - component: {fileID: 1781678672}
   - component: {fileID: 1781678671}
+  - component: {fileID: 2964729799294326757}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color02 (5)
   m_TagString: Untagged
@@ -26790,13 +27078,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2964729799294290884}
   serializedVersion: 2
-  m_LocalRotation: {x: -8.108714e-11, y: -0.68953353, z: -0.0000000027939677, w: 0.72425383}
-  m_LocalPosition: {x: -41.01561, y: 1.0051647, z: -22.540554}
+  m_LocalRotation: {x: 0.0000000014868817, y: -0.68953353, z: 0.0000000018626451, w: 0.72425383}
+  m_LocalPosition: {x: -41.01561, y: 1.0051649, z: -22.540554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2964729799294326757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2964729799294290884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &2965844956978395720
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28396,8 +28696,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3139966692751710820}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000006482969, y: 0.70710605, z: -0.000000024214387, w: 0.70710754}
-  m_LocalPosition: {x: 97.4859, y: 0.20305443, z: 39.951233}
+  m_LocalRotation: {x: 0.000000085956344, y: 0.7071058, z: -0.000000040978193, w: 0.7071078}
+  m_LocalPosition: {x: 97.4859, y: 0.20305455, z: 39.951233}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28416,6 +28716,7 @@ GameObject:
   - component: {fileID: 3139966692753704100}
   - component: {fileID: 382073010}
   - component: {fileID: 382073009}
+  - component: {fileID: 3139966692754835045}
   m_Layer: 0
   m_Name: Vehicle_Truck_color02
   m_TagString: Untagged
@@ -28479,6 +28780,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3139966692751710820}
   m_Mesh: {fileID: 4300000, guid: 0f8edee900fd5e74bb318fbd330392e4, type: 3}
+--- !u!114 &3139966692754835045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3139966692751710820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &3141699344191159306
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -29390,6 +29703,7 @@ GameObject:
   - component: {fileID: 3282484673297615400}
   - component: {fileID: 924844220}
   - component: {fileID: 924844219}
+  - component: {fileID: 3282484673299908809}
   m_Layer: 0
   m_Name: Vehicle_Taxi (12)
   m_TagString: Untagged
@@ -29405,13 +29719,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3282484673299813608}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000031859065, y: -0.70933086, z: -0.00000031013045, w: 0.7048757}
-  m_LocalPosition: {x: -37.27943, y: 1.0006069, z: 83.27731}
+  m_LocalRotation: {x: 0.000000022905102, y: -0.7093308, z: -0.000000019557776, w: 0.7048757}
+  m_LocalPosition: {x: -37.27943, y: 1.000607, z: 83.27732}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3282484673299908809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3282484673299813608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &3289249878106505620
 Transform:
   m_ObjectHideFlags: 0
@@ -29987,7 +30313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3364968588847847098}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000003739129, y: 0.00000007923244, z: 0.0000000053678373, w: 1}
+  m_LocalRotation: {x: -0.000000007437971, y: 0.0000000726377, z: 0.000000010942016, w: 1}
   m_LocalPosition: {x: 69.199905, y: 0.20013857, z: -87.34257}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -30007,6 +30333,7 @@ GameObject:
   - component: {fileID: 3364968588849776762}
   - component: {fileID: 255277801}
   - component: {fileID: 255277800}
+  - component: {fileID: 3364968588849776763}
   m_Layer: 0
   m_Name: Vehicle_Ambulance (2)
   m_TagString: Untagged
@@ -30070,6 +30397,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3364968588849776763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3364968588847847098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &3366115179614977444
 Transform:
   m_ObjectHideFlags: 0
@@ -30197,8 +30536,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3370843547391944770}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000023631468, y: 0.7071106, z: -0.00000076182187, w: 0.7071031}
-  m_LocalPosition: {x: 45.09112, y: 0.2051655, z: -59.908867}
+  m_LocalRotation: {x: 3.5234388e-10, y: 0.7071108, z: 0.000000031664964, w: 0.7071028}
+  m_LocalPosition: {x: 45.091118, y: 0.20516503, z: -59.908867}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30217,6 +30556,7 @@ GameObject:
   - component: {fileID: 3370843547389687426}
   - component: {fileID: 778662953}
   - component: {fileID: 778662952}
+  - component: {fileID: 3370843547391944771}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color02
   m_TagString: Untagged
@@ -30224,6 +30564,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3370843547391944771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3370843547391944770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &3375983847841356820
 Transform:
   m_ObjectHideFlags: 0
@@ -30426,6 +30778,7 @@ GameObject:
   - component: {fileID: 3399259869543939799}
   - component: {fileID: 1218054789}
   - component: {fileID: 1218054788}
+  - component: {fileID: 3399259869545069592}
   m_Layer: 0
   m_Name: Vehicle_SUV_color03
   m_TagString: Untagged
@@ -30441,8 +30794,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3399259869541998615}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000005738606, y: -0.7071063, z: 0.00000017136335, w: 0.70710725}
-  m_LocalPosition: {x: -41.60466, y: 0.20867181, z: 6.7754903}
+  m_LocalRotation: {x: 0.000000004080505, y: -0.7071063, z: 0.000000031664968, w: 0.70710725}
+  m_LocalPosition: {x: -41.60466, y: 0.20867169, z: 6.7754927}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30504,6 +30857,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3399259869541998615}
   m_Mesh: {fileID: 4300000, guid: c887da5f6e3230f4aa38afe5e8e30387, type: 3}
+--- !u!114 &3399259869545069592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3399259869541998615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &3437338231809117356
 GameObject:
   m_ObjectHideFlags: 0
@@ -31208,7 +31573,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3491663894762880770}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000041935118, y: 0.99999374, z: 0.000000037252903, w: -0.0035510985}
+  m_LocalRotation: {x: 0.00000001614113, y: 0.99999374, z: 0.000000022351742, w: -0.003551109}
   m_LocalPosition: {x: 108.187645, y: 1.0086737, z: 55.887184}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -31228,6 +31593,7 @@ GameObject:
   - component: {fileID: 3491663894760874434}
   - component: {fileID: 555969894}
   - component: {fileID: 555969893}
+  - component: {fileID: 3491663894762880771}
   m_Layer: 0
   m_Name: Vehicle_SUV_color03 (7)
   m_TagString: Untagged
@@ -31235,6 +31601,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3491663894762880771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3491663894762880770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &3494396108923201343
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -31556,6 +31934,7 @@ GameObject:
   - component: {fileID: 3560612858365208135}
   - component: {fileID: 610298486}
   - component: {fileID: 610298485}
+  - component: {fileID: 3560612858367501480}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color03 (1)
   m_TagString: Untagged
@@ -31571,13 +31950,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3560612858367146119}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000010418334, y: 0.96730214, z: 0.000000002793968, w: -0.25362697}
-  m_LocalPosition: {x: 119.918686, y: 0.20516539, z: 25.973946}
+  m_LocalRotation: {x: 0.000000024621272, y: 0.9673021, z: -0.0000000055879354, w: -0.2536272}
+  m_LocalPosition: {x: 119.918686, y: 0.20516527, z: 25.973946}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3560612858367501480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3560612858367146119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &3567012293240268708
 Transform:
   m_ObjectHideFlags: 0
@@ -31710,6 +32101,7 @@ GameObject:
   - component: {fileID: 3588371692424081585}
   - component: {fileID: 1087651439}
   - component: {fileID: 1087651438}
+  - component: {fileID: 3588371692426375762}
   m_Layer: 0
   m_Name: Vehicle_Container_color02 (3)
   m_TagString: Untagged
@@ -31725,13 +32117,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3588371692426342001}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000084987725, y: 0.0000010974526, z: -0.000000010054463, w: 1}
-  m_LocalPosition: {x: 129.37842, y: 0.20832491, z: 73.512215}
+  m_LocalRotation: {x: -0.0000000031497218, y: 0.0000022680304, z: 0.000000038361573, w: 1}
+  m_LocalPosition: {x: 129.37842, y: 0.20832467, z: 73.512215}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3588371692426375762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3588371692426342001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &3610496942318884509
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -31796,8 +32200,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3610496942322141853}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000098571135, y: -0.707108, z: -0.00000002654269, w: 0.70710564}
-  m_LocalPosition: {x: 75.29987, y: 0.20516479, z: -53.33317}
+  m_LocalRotation: {x: -0.000000055577786, y: -0.7071078, z: -0.0000000013969839, w: 0.7071059}
+  m_LocalPosition: {x: 75.29987, y: 0.20516479, z: -53.333176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31816,6 +32220,7 @@ GameObject:
   - component: {fileID: 3610496942319883357}
   - component: {fileID: 1865050319}
   - component: {fileID: 1865050318}
+  - component: {fileID: 3610496942322141854}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color01 (1)
   m_TagString: Untagged
@@ -31823,6 +32228,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3610496942322141854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3610496942322141853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &3611599805732793570
 GameObject:
   m_ObjectHideFlags: 0
@@ -31962,6 +32379,7 @@ GameObject:
   - component: {fileID: 3624243270062212210}
   - component: {fileID: 1591136584}
   - component: {fileID: 1591136583}
+  - component: {fileID: 3624243270063343283}
   m_Layer: 0
   m_Name: Vehicle_Truck_color02 (2)
   m_TagString: Untagged
@@ -31977,8 +32395,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3624243270060219058}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000011073495, y: -0.00002248259, z: -0.00000039486434, w: 1}
-  m_LocalPosition: {x: 129.15701, y: 0.20305419, z: -98.08259}
+  m_LocalRotation: {x: -0.0000000034348773, y: -0.000022467731, z: 0.00000005363836, w: 1}
+  m_LocalPosition: {x: 129.15701, y: 0.2030549, z: -98.08259}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32040,6 +32458,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3624243270060219058}
   m_Mesh: {fileID: 4300000, guid: 0f8edee900fd5e74bb318fbd330392e4, type: 3}
+--- !u!114 &3624243270063343283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3624243270060219058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &3638832849736646260
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -32298,6 +32728,7 @@ GameObject:
   - component: {fileID: 3654745023700844072}
   - component: {fileID: 1975201615}
   - component: {fileID: 1975201614}
+  - component: {fileID: 3654745023703268553}
   m_Layer: 0
   m_Name: Vehicle_SUV_color03 (1)
   m_TagString: Untagged
@@ -32313,13 +32744,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3654745023703032040}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000010583693, y: -0.7071064, z: 0.000000115484, w: 0.7071072}
-  m_LocalPosition: {x: -18.800116, y: 0.20867181, z: -53.048717}
+  m_LocalRotation: {x: 0.0000000039481662, y: -0.7071065, z: 0.000000031664968, w: 0.7071071}
+  m_LocalPosition: {x: -18.800114, y: 0.20867181, z: -53.048717}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3654745023703268553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3654745023703032040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!23 &3670506893903983254
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32384,8 +32827,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3670506893906177110}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0000011301232, y: 0.99997586, z: 0.000000057742, w: 0.0069593354}
-  m_LocalPosition: {x: 107.59173, y: 1.0051657, z: -29.542667}
+  m_LocalRotation: {x: 0.00000002799861, y: 0.99997586, z: 0.000000026077032, w: 0.006959335}
+  m_LocalPosition: {x: 107.591774, y: 1.0051651, z: -29.542667}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32404,6 +32847,7 @@ GameObject:
   - component: {fileID: 3670506893903983254}
   - component: {fileID: 1579070269}
   - component: {fileID: 1579070268}
+  - component: {fileID: 3670506893906177111}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color01 (4)
   m_TagString: Untagged
@@ -32411,6 +32855,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3670506893906177111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3670506893906177110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &3696084965291702826
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -32669,6 +33125,7 @@ GameObject:
   - component: {fileID: 3748261185210451334}
   - component: {fileID: 358066614}
   - component: {fileID: 358066613}
+  - component: {fileID: 3748261185212876647}
   m_Layer: 0
   m_Name: Vehicle_SUV_color01 (7)
   m_TagString: Untagged
@@ -32684,13 +33141,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3748261185212390214}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.07200258, y: 0.68234277, z: -0.11291444, w: -0.7186615}
-  m_LocalPosition: {x: -104.75488, y: -304.19153, z: 92.74792}
+  m_LocalRotation: {x: -0.072002575, y: 0.6823425, z: -0.11291441, w: -0.7186617}
+  m_LocalPosition: {x: -104.75488, y: -313.89166, z: 92.74792}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3748261185212876647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3748261185212390214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &3749954529832910840
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -33196,8 +33665,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3795041854705026760}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000025454383, y: 0.70442665, z: 0.00000002514571, w: 0.7097769}
-  m_LocalPosition: {x: 45.030624, y: 1.005165, z: 83.03952}
+  m_LocalRotation: {x: 0.000000034136292, y: 0.70442665, z: 0.000000028405339, w: 0.7097769}
+  m_LocalPosition: {x: 45.030624, y: 1.0051651, z: 83.03952}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33216,6 +33685,7 @@ GameObject:
   - component: {fileID: 3795041854702770184}
   - component: {fileID: 231877646}
   - component: {fileID: 231877645}
+  - component: {fileID: 3795041854705026761}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color02 (8)
   m_TagString: Untagged
@@ -33223,6 +33693,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3795041854705026761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3795041854705026760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &3796548514562871685
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -33837,8 +34319,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3903073034527167661}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0000000147632875, y: 0.0039977967, z: -0.000000032137905, w: 0.9999921}
-  m_LocalPosition: {x: 5.8145237, y: 0.20832467, z: 25.669289}
+  m_LocalRotation: {x: 0.0000000020185098, y: 0.003997788, z: 0.000000040308805, w: 0.9999921}
+  m_LocalPosition: {x: 5.814526, y: 0.20832467, z: 25.669289}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33857,6 +34339,7 @@ GameObject:
   - component: {fileID: 3903073034525166189}
   - component: {fileID: 806729347}
   - component: {fileID: 806729346}
+  - component: {fileID: 3903073034527167662}
   m_Layer: 0
   m_Name: Vehicle_Container_color02 (2)
   m_TagString: Untagged
@@ -33864,6 +34347,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3903073034527167662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3903073034527167661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &3904063009216300074
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -34815,6 +35310,7 @@ GameObject:
   - component: {fileID: 4031465319511395429}
   - component: {fileID: 757383353}
   - component: {fileID: 757383352}
+  - component: {fileID: 4031465319513820806}
   m_Layer: 0
   m_Name: Vehicle_SUV_color01 (3)
   m_TagString: Untagged
@@ -34830,13 +35326,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4031465319513592485}
   serializedVersion: 2
-  m_LocalRotation: {x: 1.8601484e-10, y: 0.0000013044718, z: 0.000000025080137, w: 1}
-  m_LocalPosition: {x: 129.64111, y: 0.20867157, z: -26.10343}
+  m_LocalRotation: {x: 3.5074088e-10, y: 0.0000024615504, z: 0.000000019777998, w: 1}
+  m_LocalPosition: {x: 129.64111, y: 0.20867193, z: -26.103434}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4031465319513820806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4031465319513592485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &4036754717485535688
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -35693,8 +36201,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4132010418380744279}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000050776165, y: -0.70767903, z: -0.000000057742, w: 0.70653415}
-  m_LocalPosition: {x: -67.99151, y: 1.0006069, z: -17.928436}
+  m_LocalRotation: {x: 0.000000019328766, y: -0.7076793, z: -0.000000020489097, w: 0.7065339}
+  m_LocalPosition: {x: -67.99151, y: 1.0006068, z: -17.928436}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35713,6 +36221,7 @@ GameObject:
   - component: {fileID: 4132010418383009943}
   - component: {fileID: 527037615}
   - component: {fileID: 527037614}
+  - component: {fileID: 4132010418384140888}
   m_Layer: 0
   m_Name: Vehicle_Taxi (10)
   m_TagString: Untagged
@@ -35776,6 +36285,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4132010418380744279}
   m_Mesh: {fileID: 4300000, guid: a7419a75ac6929e48842c0470aa44718, type: 3}
+--- !u!114 &4132010418384140888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4132010418380744279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &4135410823336465930
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -37574,8 +38095,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4380485425113680139}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000011912562, y: 1, z: -0.000000007450581, w: 0.000028739061}
-  m_LocalPosition: {x: 2.0354905, y: 0.20305431, z: -95.96836}
+  m_LocalRotation: {x: 0.000000048354195, y: 1, z: 0.000000007450581, w: 0.000028736806}
+  m_LocalPosition: {x: 2.0354903, y: 0.20305502, z: -95.96836}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37594,6 +38115,7 @@ GameObject:
   - component: {fileID: 4380485425111750603}
   - component: {fileID: 915721516}
   - component: {fileID: 915721515}
+  - component: {fileID: 4380485425113680140}
   m_Layer: 0
   m_Name: Vehicle_Truck_color02 (3)
   m_TagString: Untagged
@@ -37601,6 +38123,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4380485425113680140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4380485425113680139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &4420700383083212231
 GameObject:
   m_ObjectHideFlags: 0
@@ -37614,6 +38148,7 @@ GameObject:
   - component: {fileID: 4420700383085146887}
   - component: {fileID: 1293045087}
   - component: {fileID: 1293045086}
+  - component: {fileID: 4420700383085146888}
   m_Layer: 0
   m_Name: Vehicle_Truck_color03
   m_TagString: Untagged
@@ -37629,8 +38164,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4420700383083212231}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000006265327, y: 0.7070872, z: -0.000000067055225, w: 0.7071263}
-  m_LocalPosition: {x: -98.18996, y: 0.20305407, z: -59.948765}
+  m_LocalRotation: {x: 0.000000021214873, y: 0.7070872, z: 0.000000052154064, w: 0.7071263}
+  m_LocalPosition: {x: -98.18996, y: 0.20305419, z: -59.948765}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37692,6 +38227,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4420700383085146888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4420700383083212231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!23 &4431253379855680564
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37904,6 +38451,7 @@ GameObject:
   - component: {fileID: 4445146083121780755}
   - component: {fileID: 1667869380}
   - component: {fileID: 1667869379}
+  - component: {fileID: 4445146083121780756}
   m_Layer: 0
   m_Name: Vehicle_Bus_color02 (1)
   m_TagString: Untagged
@@ -37919,8 +38467,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4445146083119843027}
   serializedVersion: 2
-  m_LocalRotation: {x: -1.5063595e-10, y: -0.0000043427794, z: 0.00000002879316, w: 1}
-  m_LocalPosition: {x: 9.00036, y: 0.20505571, z: -72.09822}
+  m_LocalRotation: {x: 0.0000000041460595, y: -0.0000041702538, z: 0.000000016511997, w: 1}
+  m_LocalPosition: {x: 9.000365, y: 0.20505583, z: -72.09822}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37982,6 +38530,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4445146083121780756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4445146083119843027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &4456321437896260080
 Transform:
   m_ObjectHideFlags: 0
@@ -38172,8 +38732,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4482370253239918874}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0000000104785665, y: 0.0024470245, z: 0.00000007307607, w: 0.999997}
-  m_LocalPosition: {x: -111.10162, y: 0.20363557, z: -23.24297}
+  m_LocalRotation: {x: 4.573319e-10, y: 0.0024459208, z: -0.0000000021082085, w: 0.999997}
+  m_LocalPosition: {x: -111.10162, y: 0.20363545, z: -23.24297}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38192,6 +38752,7 @@ GameObject:
   - component: {fileID: 4482370253237927898}
   - component: {fileID: 2128837897}
   - component: {fileID: 2128837896}
+  - component: {fileID: 4482370253239918875}
   m_Layer: 0
   m_Name: Vehicle_Car_color02 (2)
   m_TagString: Untagged
@@ -38199,6 +38760,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4482370253239918875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4482370253239918874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &4486332477228606818
 Transform:
   m_ObjectHideFlags: 0
@@ -38270,8 +38843,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4495143204590359571}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000019111485, y: 1, z: -0.000000029802319, w: 0.0000020479977}
-  m_LocalPosition: {x: -117.4099, y: 0.20867157, z: -40.778183}
+  m_LocalRotation: {x: 0.000000018834909, y: 1, z: -0, w: 0.0000020334844}
+  m_LocalPosition: {x: -117.4099, y: 0.20867193, z: -40.778183}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38290,6 +38863,7 @@ GameObject:
   - component: {fileID: 4495143204592290515}
   - component: {fileID: 423814917}
   - component: {fileID: 423814916}
+  - component: {fileID: 4495143204592290516}
   m_Layer: 0
   m_Name: Vehicle_SUV_color02
   m_TagString: Untagged
@@ -38353,6 +38927,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4495143204592290516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4495143204590359571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &4498018285154551988
 Transform:
   m_ObjectHideFlags: 0
@@ -40580,8 +41166,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4757953723324820677}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000019349467, y: 0.70710945, z: 0.000000071711845, w: 0.70710415}
-  m_LocalPosition: {x: 24.4999, y: 0.20060682, z: -60.035313}
+  m_LocalRotation: {x: -0.000000015469725, y: 0.70710945, z: 0.000000014435501, w: 0.70710415}
+  m_LocalPosition: {x: 24.4999, y: 0.2006067, z: -60.035313}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40600,6 +41186,7 @@ GameObject:
   - component: {fileID: 4757953723327017477}
   - component: {fileID: 1212064961}
   - component: {fileID: 1212064960}
+  - component: {fileID: 4757953723327983814}
   m_Layer: 0
   m_Name: Vehicle_Taxi (1)
   m_TagString: Untagged
@@ -40663,6 +41250,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4757953723324820677}
   m_Mesh: {fileID: 4300000, guid: a7419a75ac6929e48842c0470aa44718, type: 3}
+--- !u!114 &4757953723327983814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4757953723324820677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &4759916199777164557
 Transform:
   m_ObjectHideFlags: 0
@@ -41173,6 +41772,7 @@ GameObject:
   - component: {fileID: 4831394289756618535}
   - component: {fileID: 599688541}
   - component: {fileID: 599688540}
+  - component: {fileID: 4831394289758911944}
   m_Layer: 0
   m_Name: Vehicle_Truck_color01 (1)
   m_TagString: Untagged
@@ -41188,13 +41788,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4831394289758609895}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000001410001, y: -0.000023306653, z: 0.000000046999958, w: 1}
-  m_LocalPosition: {x: -51.20011, y: 0.20305431, z: -41.60906}
+  m_LocalRotation: {x: -0.0000000023332518, y: -0.000023291224, z: 0.00000005271795, w: 1}
+  m_LocalPosition: {x: -51.20011, y: 0.2030549, z: -41.60906}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4831394289758911944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4831394289758609895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &4834575652950315913
 GameObject:
   m_ObjectHideFlags: 0
@@ -41334,6 +41946,7 @@ GameObject:
   - component: {fileID: 4847424863502131173}
   - component: {fileID: 1897985933}
   - component: {fileID: 1897985932}
+  - component: {fileID: 4847424863502131174}
   m_Layer: 0
   m_Name: Vehicle_Container_color02
   m_TagString: Untagged
@@ -41349,8 +41962,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4847424863500124453}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000019181013, y: 0.70712024, z: 0.00000022351739, w: 0.70709336}
-  m_LocalPosition: {x: 32.547558, y: 0.20832491, z: -119.94873}
+  m_LocalRotation: {x: 0.000000016416832, y: 0.707121, z: 0.0000000372529, w: 0.7070926}
+  m_LocalPosition: {x: 32.547535, y: 0.20832491, z: -119.94873}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41412,6 +42025,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4847424863502131174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4847424863500124453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &4850523003023438653
 GameObject:
   m_ObjectHideFlags: 0
@@ -44603,7 +45228,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5441618421585081793}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000071818604, y: 0.70710695, z: 0.000000034458935, w: 0.7071067}
+  m_LocalRotation: {x: 0.000000016942906, y: 0.70710737, z: 0.000000016763806, w: 0.7071063}
   m_LocalPosition: {x: -46.930958, y: 0.20516503, z: -120.28401}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -44623,6 +45248,7 @@ GameObject:
   - component: {fileID: 5441618421587274497}
   - component: {fileID: 2057017228}
   - component: {fileID: 2057017227}
+  - component: {fileID: 5441618421588371906}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color01
   m_TagString: Untagged
@@ -44686,6 +45312,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5441618421585081793}
   m_Mesh: {fileID: 4300000, guid: 6780ac7fd67c9ab43aebe63ff3fb60aa, type: 3}
+--- !u!114 &5441618421588371906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5441618421585081793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &5455211674804927254
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -45478,6 +46116,7 @@ GameObject:
   - component: {fileID: 5610129238635081846}
   - component: {fileID: 1808119080}
   - component: {fileID: 1808119079}
+  - component: {fileID: 5610129238636180151}
   m_Layer: 0
   m_Name: Vehicle_Car_color03
   m_TagString: Untagged
@@ -45493,7 +46132,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5610129238633148086}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000022376021, y: 0.7072421, z: 0.00000009918584, w: 0.70697147}
+  m_LocalRotation: {x: -0.000000017086661, y: 0.70724183, z: 0.000000013969837, w: 0.7069717}
   m_LocalPosition: {x: -72.33844, y: 0.20363605, z: -119.83991}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -45556,6 +46195,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5610129238633148086}
   m_Mesh: {fileID: 4300000, guid: 49fee4c5907e33545a3b2db2e9d66675, type: 3}
+--- !u!114 &5610129238636180151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5610129238633148086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &5622167794109530016
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -45625,6 +46276,7 @@ GameObject:
   - component: {fileID: 5622167794110659936}
   - component: {fileID: 1415790329}
   - component: {fileID: 1415790328}
+  - component: {fileID: 5622167794112954241}
   m_Layer: 0
   m_Name: Vehicle_Police Car
   m_TagString: Untagged
@@ -45640,13 +46292,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5622167794112652192}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000035633203, y: 0.70824295, z: 0.00000008521601, w: 0.70596886}
-  m_LocalPosition: {x: -15.951042, y: 0.20362127, z: -119.87329}
+  m_LocalRotation: {x: -0.000000016176328, y: 0.7082417, z: 0.000000014435498, w: 0.7059701}
+  m_LocalPosition: {x: -15.951042, y: 0.20362103, z: -119.87329}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5622167794112954241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5622167794112652192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &5632299157568033901
 GameObject:
   m_ObjectHideFlags: 0
@@ -45837,8 +46501,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5644212261254628520}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000033705515, y: 0.0000034104737, z: 0.000000018977218, w: 1}
-  m_LocalPosition: {x: 9.526327, y: 0.20363593, z: -26.627413}
+  m_LocalRotation: {x: -0.0000000039031427, y: 0.000003408978, z: 9.357279e-10, w: 1}
+  m_LocalPosition: {x: 9.5263195, y: 0.20363593, z: -26.627413}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45857,6 +46521,7 @@ GameObject:
   - component: {fileID: 5644212261252635240}
   - component: {fileID: 1013393783}
   - component: {fileID: 1013393782}
+  - component: {fileID: 5644212261254628521}
   m_Layer: 0
   m_Name: Vehicle_Car_color03 (2)
   m_TagString: Untagged
@@ -45864,6 +46529,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5644212261254628521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5644212261254628520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &5661971379895065731
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -46817,8 +47494,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5800757162105740968}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000012098526, y: 0.00000003872367, z: -0.00000009523855, w: 1}
-  m_LocalPosition: {x: 8.634405, y: 0.20060682, z: 72.15461}
+  m_LocalRotation: {x: -0.00000001721449, y: 0.00000008129655, z: -0.0000000037228318, w: 1}
+  m_LocalPosition: {x: 8.634405, y: 0.20060694, z: 72.15461}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46837,6 +47514,7 @@ GameObject:
   - component: {fileID: 5800757162107928680}
   - component: {fileID: 896275982}
   - component: {fileID: 896275981}
+  - component: {fileID: 5800757162107928681}
   m_Layer: 0
   m_Name: Vehicle_Taxi (5)
   m_TagString: Untagged
@@ -46900,6 +47578,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5800757162107928681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5800757162105740968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!95 &5823330307028029118
 Animator:
   serializedVersion: 7
@@ -47278,8 +47968,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5913947633645665565}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000014726014, y: 0.70710874, z: 0.0000002407469, w: 0.70710486}
-  m_LocalPosition: {x: 91.92506, y: 0.20060718, z: -60.035316}
+  m_LocalRotation: {x: -0.000000014669468, y: 0.70710874, z: 0.000000014435501, w: 0.70710486}
+  m_LocalPosition: {x: 91.92506, y: 0.20060706, z: -60.035316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47298,6 +47988,7 @@ GameObject:
   - component: {fileID: 5913947633643463645}
   - component: {fileID: 877537893}
   - component: {fileID: 877537892}
+  - component: {fileID: 5913947633645665566}
   m_Layer: 0
   m_Name: Vehicle_Taxi
   m_TagString: Untagged
@@ -47305,6 +47996,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5913947633645665566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913947633645665565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &5915709197848217070
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -47558,8 +48261,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6060440876347606979}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000006810947, y: 1, z: 0.000000037252903, w: -0.000004070152}
-  m_LocalPosition: {x: -117.21918, y: 0.20363605, z: -76.29397}
+  m_LocalRotation: {x: -9.0943786e-10, y: 1, z: 4.656613e-10, w: -0.0000040644923}
+  m_LocalPosition: {x: -117.21918, y: 0.20363593, z: -76.29397}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47578,6 +48281,7 @@ GameObject:
   - component: {fileID: 6060440876345612547}
   - component: {fileID: 1789442456}
   - component: {fileID: 1789442455}
+  - component: {fileID: 6060440876347606980}
   m_Layer: 0
   m_Name: Vehicle_Car_color02 (3)
   m_TagString: Untagged
@@ -47585,6 +48289,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6060440876347606980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6060440876347606979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &6063536120933649427
 Transform:
   m_ObjectHideFlags: 0
@@ -48102,6 +48818,7 @@ GameObject:
   - component: {fileID: 6125575690435883813}
   - component: {fileID: 407140749}
   - component: {fileID: 407140748}
+  - component: {fileID: 6125575690435883814}
   m_Layer: 0
   m_Name: Vehicle_Container_color03
   m_TagString: Untagged
@@ -48117,8 +48834,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6125575690433621477}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000008189863, y: -0.70708543, z: 0.00000006146728, w: 0.70712817}
-  m_LocalPosition: {x: -1.2999988, y: 0.20832467, z: 46.151207}
+  m_LocalRotation: {x: -0.000000029586769, y: -0.70708454, z: 0.000000042840835, w: 0.70712906}
+  m_LocalPosition: {x: -1.3000019, y: 0.20832491, z: 46.15122}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48180,6 +48897,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6125575690435883814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6125575690433621477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &6126220250175486433
 Transform:
   m_ObjectHideFlags: 0
@@ -48375,6 +49104,7 @@ GameObject:
   - component: {fileID: 6141209757866474004}
   - component: {fileID: 1236410491}
   - component: {fileID: 1236410490}
+  - component: {fileID: 6141209757868767477}
   m_Layer: 0
   m_Name: Vehicle_Car_color01
   m_TagString: Untagged
@@ -48390,13 +49120,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6141209757868467412}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000016811212, y: 0.7081973, z: 0.000000015832482, w: 0.70601463}
-  m_LocalPosition: {x: -19.299257, y: 0.2036357, z: 0.23437986}
+  m_LocalRotation: {x: -0.000000015108583, y: 0.7081975, z: 0.000000014901161, w: 0.70601445}
+  m_LocalPosition: {x: -19.299257, y: 0.2036357, z: 0.23438019}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6141209757868767477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6141209757868467412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &6145451671940537839
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -49091,7 +49833,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6203355092127877252}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000031696555, y: 0.9999648, z: 0.000000026077029, w: -0.0083908625}
+  m_LocalRotation: {x: 0.000000013244529, y: 0.9999648, z: 0.00000002235174, w: -0.008390885}
   m_LocalPosition: {x: 103.139915, y: 1.0086719, z: -14.914149}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -49111,6 +49853,7 @@ GameObject:
   - component: {fileID: 6203355092125881924}
   - component: {fileID: 157000584}
   - component: {fileID: 157000583}
+  - component: {fileID: 6203355092127877253}
   m_Layer: 0
   m_Name: Vehicle_SUV_color03 (5)
   m_TagString: Untagged
@@ -49118,6 +49861,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6203355092127877253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203355092127877252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &6207540924877303218
 GameObject:
   m_ObjectHideFlags: 0
@@ -50173,8 +50928,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6290768759153455206}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000001904584, y: 1, z: 0.00000007078051, w: 0.000005687824}
-  m_LocalPosition: {x: 122.537224, y: 0.20516527, z: -78.16848}
+  m_LocalRotation: {x: 0.000000024376586, y: 1, z: 0.0000000018626449, w: 0.000005679809}
+  m_LocalPosition: {x: 122.537224, y: 0.20516503, z: -78.16848}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50193,6 +50948,7 @@ GameObject:
   - component: {fileID: 6290768759151259302}
   - component: {fileID: 903848445}
   - component: {fileID: 903848444}
+  - component: {fileID: 6290768759153455207}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color01 (3)
   m_TagString: Untagged
@@ -50200,6 +50956,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6290768759153455207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6290768759153455206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!95 &6316073533697957011
 Animator:
   serializedVersion: 7
@@ -51643,7 +52411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6568621240737356340}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0000000013294357, y: -0.000005181631, z: -0.0000000028814355, w: 1}
+  m_LocalRotation: {x: -0.000000003327278, y: -0.0000051816237, z: 0.00000000189182, w: 1}
   m_LocalPosition: {x: 69.45272, y: 0.20362115, z: -27.678293}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -51663,6 +52431,7 @@ GameObject:
   - component: {fileID: 6568621240735417588}
   - component: {fileID: 1735274586}
   - component: {fileID: 1735274585}
+  - component: {fileID: 6568621240737356341}
   m_Layer: 0
   m_Name: Vehicle_Police Car (5)
   m_TagString: Untagged
@@ -51670,6 +52439,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6568621240737356341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6568621240737356340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &6571387178982816108
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -52243,6 +53024,7 @@ GameObject:
   - component: {fileID: 6677670049737103201}
   - component: {fileID: 406819737}
   - component: {fileID: 406819736}
+  - component: {fileID: 6677670049739527554}
   m_Layer: 0
   m_Name: Vehicle_Container_color01 (1)
   m_TagString: Untagged
@@ -52258,13 +53040,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6677670049739360673}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000005010361, y: -0.707108, z: -0.0000000037252903, w: 0.70710564}
-  m_LocalPosition: {x: 117.3999, y: 0.20832491, z: -113.548775}
+  m_LocalRotation: {x: -0.00000006976779, y: -0.7071078, z: 0.00000004284084, w: 0.7071059}
+  m_LocalPosition: {x: 117.3999, y: 0.20832515, z: -113.548775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6677670049739527554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6677670049739360673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &6690829139337124089
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -53537,6 +54331,7 @@ GameObject:
   - component: {fileID: 6825334248574261066}
   - component: {fileID: 2048416115}
   - component: {fileID: 2048416114}
+  - component: {fileID: 6825334248576554411}
   m_Layer: 0
   m_Name: Vehicle_Bus_color03 (1)
   m_TagString: Untagged
@@ -53552,13 +54347,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6825334248576190858}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000053601994, y: -0.70708936, z: 0.000000052510586, w: 0.70712423}
-  m_LocalPosition: {x: 72.830574, y: 0.20505571, z: 6.8174963}
+  m_LocalRotation: {x: 0.0000000015796733, y: -0.7070887, z: 0.000000001549779, w: 0.7071249}
+  m_LocalPosition: {x: 72.830574, y: 0.20505571, z: 6.817496}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6825334248576554411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6825334248576190858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!23 &6838960658852665261
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -53628,6 +54435,7 @@ GameObject:
   - component: {fileID: 6838960658852665261}
   - component: {fileID: 277899262}
   - component: {fileID: 277899261}
+  - component: {fileID: 6838960658855089486}
   m_Layer: 0
   m_Name: Vehicle_Taxi (4)
   m_TagString: Untagged
@@ -53643,13 +54451,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6838960658854857069}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000007154325, y: -0.70710635, z: 0.00000008940697, w: 0.7071072}
-  m_LocalPosition: {x: -83.10009, y: 0.20060694, z: 7.051294}
+  m_LocalRotation: {x: -0.000000022256708, y: -0.7071065, z: -0.000000007916243, w: 0.7071072}
+  m_LocalPosition: {x: -83.10009, y: 0.20060658, z: 7.0512934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6838960658855089486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6838960658854857069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &6839223298633211683
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -54500,8 +55320,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6940203064574132014}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000018087853, y: -0.00014602675, z: 0.00000018290768, w: 1}
-  m_LocalPosition: {x: -111.101234, y: 0.20516562, z: -88.90457}
+  m_LocalRotation: {x: -0.0000000013216954, y: -0.00014601828, z: 0.000000022924038, w: 1}
+  m_LocalPosition: {x: -111.101295, y: 0.20516503, z: -88.90457}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -54520,6 +55340,7 @@ GameObject:
   - component: {fileID: 6940203064576319982}
   - component: {fileID: 2058955820}
   - component: {fileID: 2058955819}
+  - component: {fileID: 6940203064577450799}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color02 (3)
   m_TagString: Untagged
@@ -54583,6 +55404,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6940203064574132014}
   m_Mesh: {fileID: 4300000, guid: 6780ac7fd67c9ab43aebe63ff3fb60aa, type: 3}
+--- !u!114 &6940203064577450799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6940203064574132014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &6940745880253410379
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -54654,8 +55487,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6960018149421777840}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0000000852764, y: 0.7071375, z: 0.000000073407136, w: 0.7070761}
-  m_LocalPosition: {x: -95.29998, y: 0.20505595, z: 40.138306}
+  m_LocalRotation: {x: -5.209917e-10, y: 0.7071375, z: 0.000000024629117, w: 0.7070761}
+  m_LocalPosition: {x: -95.29998, y: 0.20505583, z: 40.138306}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -54674,6 +55507,7 @@ GameObject:
   - component: {fileID: 6960018149423717744}
   - component: {fileID: 2066565919}
   - component: {fileID: 2066565918}
+  - component: {fileID: 6960018149424848817}
   m_Layer: 0
   m_Name: Vehicle_Bus_color03
   m_TagString: Untagged
@@ -54737,6 +55571,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6960018149421777840}
   m_Mesh: {fileID: 4300000, guid: 0d82ae0493e1c264bad0588fde0a3d8a, type: 3}
+--- !u!114 &6960018149424848817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6960018149421777840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &6962475308508880067
 GameObject:
   m_ObjectHideFlags: 0
@@ -55002,6 +55848,7 @@ GameObject:
   - component: {fileID: 6998218480900750167}
   - component: {fileID: 1804096423}
   - component: {fileID: 1804096422}
+  - component: {fileID: 6998218480901749144}
   m_Layer: 0
   m_Name: Vehicle_SUV_color02 (1)
   m_TagString: Untagged
@@ -55017,7 +55864,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6998218480898745751}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000026901514, y: 1, z: 0.000000048428767, w: 0.00000496648}
+  m_LocalRotation: {x: -0.000000018476127, y: 1, z: 0.000000014901159, w: 0.000004974091}
   m_LocalPosition: {x: -63.190186, y: 1.0086718, z: 92.03121}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -55080,6 +55927,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6998218480898745751}
   m_Mesh: {fileID: 4300000, guid: c887da5f6e3230f4aa38afe5e8e30387, type: 3}
+--- !u!114 &6998218480901749144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6998218480898745751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &7002641680813927704
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -55844,8 +56703,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7106378517442349203}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000007672866, y: 1, z: -0.00000013783573, w: -0.00000041481093}
-  m_LocalPosition: {x: 62.099907, y: 0.20867217, z: -76.919266}
+  m_LocalRotation: {x: 0.000000019708024, y: 1, z: -0, w: -0.00000042979985}
+  m_LocalPosition: {x: 62.099907, y: 0.20867193, z: -76.919266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55864,6 +56723,7 @@ GameObject:
   - component: {fileID: 7106378517444351571}
   - component: {fileID: 577118053}
   - component: {fileID: 577118052}
+  - component: {fileID: 7106378517444351572}
   m_Layer: 0
   m_Name: Vehicle_SUV_color03 (4)
   m_TagString: Untagged
@@ -55927,6 +56787,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7106378517444351572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7106378517442349203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &7110798970812813060
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -56523,6 +57395,7 @@ GameObject:
   - component: {fileID: 7218814785755503472}
   - component: {fileID: 2089498100}
   - component: {fileID: 2089498099}
+  - component: {fileID: 7218814785757796753}
   m_Layer: 0
   m_Name: Vehicle_Car_color02
   m_TagString: Untagged
@@ -56538,13 +57411,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7218814785757496752}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000013875896, y: 0.7071083, z: -0.00000015832484, w: 0.7071053}
-  m_LocalPosition: {x: 86.5664, y: 0.20363581, z: -119.84872}
+  m_LocalRotation: {x: 0.00000007983813, y: 0.70710856, z: -0.00000007310882, w: 0.70710504}
+  m_LocalPosition: {x: 86.5664, y: 0.20363593, z: -119.84872}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7218814785757796753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7218814785757496752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &7236423945765808746
 Transform:
   m_ObjectHideFlags: 0
@@ -57067,8 +57952,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7327362885231140972}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0000000531165, y: 0.0000008605282, z: 0.000000029968728, w: 1}
-  m_LocalPosition: {x: -51.189156, y: 0.20516527, z: -87.86833}
+  m_LocalRotation: {x: 8.996675e-10, y: 0.0000008788991, z: 0.000000022546342, w: 1}
+  m_LocalPosition: {x: -51.189156, y: 0.20516503, z: -87.86833}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -57087,6 +57972,7 @@ GameObject:
   - component: {fileID: 7327362885233409708}
   - component: {fileID: 154194892}
   - component: {fileID: 154194891}
+  - component: {fileID: 7327362885233409709}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color03
   m_TagString: Untagged
@@ -57150,6 +58036,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7327362885233409709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7327362885231140972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &7329625733806421691
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -57226,6 +58124,7 @@ GameObject:
   - component: {fileID: 7333167095653069132}
   - component: {fileID: 1106794828}
   - component: {fileID: 1106794827}
+  - component: {fileID: 7333167095653069133}
   m_Layer: 0
   m_Name: Vehicle_Truck_color01
   m_TagString: Untagged
@@ -57241,7 +58140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7333167095650807692}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0000000049867594, y: 0.7070873, z: 0.000000031664968, w: 0.7071263}
+  m_LocalRotation: {x: 0.000000019594154, y: 0.7070873, z: 0.000000052154064, w: 0.7071263}
   m_LocalPosition: {x: -29.544893, y: 0.20305467, z: -59.303596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -57304,6 +58203,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7333167095653069133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7333167095650807692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &7356104126658499375
 GameObject:
   m_ObjectHideFlags: 0
@@ -57317,6 +58228,7 @@ GameObject:
   - component: {fileID: 7356104126660431343}
   - component: {fileID: 960707098}
   - component: {fileID: 960707097}
+  - component: {fileID: 7356104126661398320}
   m_Layer: 0
   m_Name: Vehicle_Bus_color01 (1)
   m_TagString: Untagged
@@ -57332,8 +58244,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7356104126658499375}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000097070554, y: -0.7070936, z: -0.00000006530172, w: 0.70712006}
-  m_LocalPosition: {x: -64.450096, y: 0.2050556, z: 53.651333}
+  m_LocalRotation: {x: 0.0000000071378716, y: -0.7070933, z: 0.000000028332579, w: 0.70712036}
+  m_LocalPosition: {x: -64.450096, y: 0.20505571, z: 53.65134}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -57395,6 +58307,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7356104126658499375}
   m_Mesh: {fileID: 4300000, guid: 0d82ae0493e1c264bad0588fde0a3d8a, type: 3}
+--- !u!114 &7356104126661398320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7356104126658499375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &7359649013736430395
 Transform:
   m_ObjectHideFlags: 0
@@ -57403,8 +58327,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7359649013736916763}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000010930168, y: -0.00820562, z: 0.00000011533848, w: 0.9999664}
-  m_LocalPosition: {x: 103.21859, y: 1.0051646, z: -130.41856}
+  m_LocalRotation: {x: 0.000000020153688, y: -0.008205615, z: 0.000000010470103, w: 0.9999664}
+  m_LocalPosition: {x: 103.21853, y: 1.0051649, z: -130.41856}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -57423,6 +58347,7 @@ GameObject:
   - component: {fileID: 7359649013738854875}
   - component: {fileID: 387907055}
   - component: {fileID: 387907054}
+  - component: {fileID: 7359649013738854876}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color02 (7)
   m_TagString: Untagged
@@ -57486,6 +58411,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7359649013738854876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7359649013736916763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &7367026347908946900
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -59173,6 +60110,7 @@ GameObject:
   - component: {fileID: 7526541858009429755}
   - component: {fileID: 2120876941}
   - component: {fileID: 2120876940}
+  - component: {fileID: 7526541858011853852}
   m_Layer: 0
   m_Name: Vehicle_SUV_color01 (9)
   m_TagString: Untagged
@@ -59188,13 +60126,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7526541858011359291}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.045170512, y: -0.99791086, z: -0.028342474, w: -0.03647399}
-  m_LocalPosition: {x: 26.73627, y: -294.40125, z: 53.715973}
+  m_LocalRotation: {x: 0.045170557, y: -0.99791086, z: -0.02834249, w: -0.036473993}
+  m_LocalPosition: {x: 26.73627, y: -304.10138, z: 53.715973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7526541858011853852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7526541858011359291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &7561077386889454113
 Transform:
   m_ObjectHideFlags: 0
@@ -59723,7 +60673,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7669394841229136233}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0000000036016206, y: -0.70710486, z: 0.00000003166497, w: 0.7071088}
+  m_LocalRotation: {x: 0.000000016218381, y: -0.70710486, z: 0.000000014435501, w: 0.7071088}
   m_LocalPosition: {x: -56.60013, y: 0.20060706, z: 46.65127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -59743,6 +60693,7 @@ GameObject:
   - component: {fileID: 7669394841227202473}
   - component: {fileID: 1691801641}
   - component: {fileID: 1691801640}
+  - component: {fileID: 7669394841229136234}
   m_Layer: 0
   m_Name: Vehicle_Taxi (3)
   m_TagString: Untagged
@@ -59750,6 +60701,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7669394841229136234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7669394841229136233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &7671043305678182748
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -60308,8 +61271,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7738956207474746835}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000006293732, y: 0.7071069, z: -0.000000085216016, w: 0.70710665}
-  m_LocalPosition: {x: 94.197174, y: 0.20362103, z: 0.4046548}
+  m_LocalRotation: {x: 0.000000109500846, y: 0.7071069, z: 0.000000027939677, w: 0.70710665}
+  m_LocalPosition: {x: 94.197174, y: 0.20362115, z: 0.40465552}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -60328,6 +61291,7 @@ GameObject:
   - component: {fileID: 7738956207476751123}
   - component: {fileID: 132791483}
   - component: {fileID: 132791482}
+  - component: {fileID: 7738956207476751124}
   m_Layer: 0
   m_Name: Vehicle_Police Car (1)
   m_TagString: Untagged
@@ -60391,6 +61355,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7738956207476751124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7738956207474746835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &7740050252811720334
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -60908,6 +61884,7 @@ GameObject:
   - component: {fileID: 7815293398522837384}
   - component: {fileID: 242280219}
   - component: {fileID: 242280218}
+  - component: {fileID: 7815293398523968329}
   m_Layer: 0
   m_Name: Vehicle_Container_color02 (4)
   m_TagString: Untagged
@@ -60923,8 +61900,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7815293398520833864}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000007019025, y: 1, z: -0.0000000074505797, w: -0.00005003825}
-  m_LocalPosition: {x: 61.999683, y: 0.20832467, z: -23.048588}
+  m_LocalRotation: {x: 0.0000000348009, y: 1, z: -0.000000005587935, w: -0.000050051814}
+  m_LocalPosition: {x: 61.999653, y: 0.20832467, z: -23.048588}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -60986,6 +61963,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7815293398520833864}
   m_Mesh: {fileID: 4300000, guid: af2166692e99625489131a7bf2114bd6, type: 3}
+--- !u!114 &7815293398523968329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7815293398520833864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &7816379978379451901
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -61055,6 +62044,7 @@ GameObject:
   - component: {fileID: 7816379978380549949}
   - component: {fileID: 1121116337}
   - component: {fileID: 1121116336}
+  - component: {fileID: 7816379978382843358}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color02 (2)
   m_TagString: Untagged
@@ -61070,13 +62060,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7816379978382803453}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000019300352, y: -0.7070978, z: 0.00000016856939, w: 0.7071158}
-  m_LocalPosition: {x: 31.224838, y: 0.20516527, z: -113.24902}
+  m_LocalRotation: {x: -0.0000000033550123, y: -0.70709664, z: 0.000000031664968, w: 0.707117}
+  m_LocalPosition: {x: 31.224838, y: 0.20516515, z: -113.24903}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7816379978382843358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7816379978382803453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &7837611175255891597
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -61279,6 +62281,7 @@ GameObject:
   - component: {fileID: 7842870894073062505}
   - component: {fileID: 94576758}
   - component: {fileID: 94576757}
+  - component: {fileID: 7842870894073062506}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color01 (7)
   m_TagString: Untagged
@@ -61294,8 +62297,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7842870894071069353}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0030856496, y: 0.939749, z: 0.00841278, w: 0.3417479}
-  m_LocalPosition: {x: 112.009, y: 1.0371512, z: 87.66868}
+  m_LocalRotation: {x: -0.0030779934, y: 0.93975186, z: 0.008417634, w: 0.3417398}
+  m_LocalPosition: {x: 112.009026, y: 1.0371485, z: 87.6687}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -61357,6 +62360,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7842870894073062506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7842870894071069353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &7846091423714789726
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -61426,6 +62441,7 @@ GameObject:
   - component: {fileID: 7846091423715888030}
   - component: {fileID: 1706805420}
   - component: {fileID: 1706805419}
+  - component: {fileID: 7846091423718181247}
   m_Layer: 0
   m_Name: Vehicle_Container_color02 (1)
   m_TagString: Untagged
@@ -61441,13 +62457,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7846091423717889374}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000010705207, y: -0.707106, z: 0.000000026077032, w: 0.70710766}
-  m_LocalPosition: {x: 113.83669, y: 0.20832539, z: -53.44874}
+  m_LocalRotation: {x: 0.0000000023214852, y: -0.7071048, z: 0.000000037252903, w: 0.70710886}
+  m_LocalPosition: {x: 113.83669, y: 0.2083261, z: -53.44873}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7846091423718181247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7846091423717889374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &7883920538925198371
 Transform:
   m_ObjectHideFlags: 0
@@ -62542,6 +63570,7 @@ GameObject:
   - component: {fileID: 8048102878522915083}
   - component: {fileID: 41952648}
   - component: {fileID: 41952647}
+  - component: {fileID: 8048102878524046284}
   m_Layer: 0
   m_Name: Vehicle_SUV_color01 (6)
   m_TagString: Untagged
@@ -62557,8 +63586,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8048102878520977355}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000007865674, y: 0.37396052, z: -0.0000062426543, w: 0.9274446}
-  m_LocalPosition: {x: -86.36608, y: 1.0086883, z: -7.979163}
+  m_LocalRotation: {x: -0.00000018000344, y: 0.3739604, z: -0.00000018719581, w: 0.92744464}
+  m_LocalPosition: {x: -86.3661, y: 1.0086709, z: -7.979164}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -62620,6 +63649,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8048102878520977355}
   m_Mesh: {fileID: 4300000, guid: c887da5f6e3230f4aa38afe5e8e30387, type: 3}
+--- !u!114 &8048102878524046284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8048102878520977355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &8070474184458346370
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -63004,6 +64045,7 @@ GameObject:
   - component: {fileID: 8128998023943441030}
   - component: {fileID: 239040065}
   - component: {fileID: 239040064}
+  - component: {fileID: 8128998023945865319}
   m_Layer: 0
   m_Name: Vehicle_Container_color02 (5)
   m_TagString: Untagged
@@ -63019,13 +64061,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8128998023945704518}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000076004646, y: 1, z: 0.000000016763805, w: -0.000011759306}
-  m_LocalPosition: {x: -57.333313, y: 0.20832467, z: -21.41167}
+  m_LocalRotation: {x: 0.000000034900946, y: 1, z: -0.000000005587935, w: -0.0000117725795}
+  m_LocalPosition: {x: -57.333313, y: 0.20832491, z: -21.41167}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8128998023945865319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8128998023945704518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &8151252297691881419
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -63341,63 +64395,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: a4051385261ccbb45a4060203fd8d66e, type: 3}
---- !u!1001 &8202087381432679606
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 604672080885137467, guid: 8d74cd0d3bacd6540827079080af4afc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 604672080885137467, guid: 8d74cd0d3bacd6540827079080af4afc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 604672080885137467, guid: 8d74cd0d3bacd6540827079080af4afc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 604672080885137467, guid: 8d74cd0d3bacd6540827079080af4afc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 604672080885137467, guid: 8d74cd0d3bacd6540827079080af4afc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 604672080885137467, guid: 8d74cd0d3bacd6540827079080af4afc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 604672080885137467, guid: 8d74cd0d3bacd6540827079080af4afc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 604672080885137467, guid: 8d74cd0d3bacd6540827079080af4afc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 604672080885137467, guid: 8d74cd0d3bacd6540827079080af4afc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 604672080885137467, guid: 8d74cd0d3bacd6540827079080af4afc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4668322918474917394, guid: 8d74cd0d3bacd6540827079080af4afc, type: 3}
-      propertyPath: m_Name
-      value: ExpCrystal
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8d74cd0d3bacd6540827079080af4afc, type: 3}
 --- !u!33 &8232553721852820880
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -63812,6 +64809,7 @@ GameObject:
   - component: {fileID: 8279207742957935491}
   - component: {fileID: 784925365}
   - component: {fileID: 784925364}
+  - component: {fileID: 8279207742958901572}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color01 (9)
   m_TagString: Untagged
@@ -63827,8 +64825,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8279207742955668803}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000048142894, y: 0.99999774, z: 0.00000009126961, w: -0.0021514944}
-  m_LocalPosition: {x: -8.623933, y: 1.005166, z: 56.10488}
+  m_LocalRotation: {x: 0.000000021986807, y: 0.99999774, z: 0.000000019557774, w: -0.002151503}
+  m_LocalPosition: {x: -8.623933, y: 1.0051663, z: 56.10488}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -63890,6 +64888,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8279207742955668803}
   m_Mesh: {fileID: 4300000, guid: 6780ac7fd67c9ab43aebe63ff3fb60aa, type: 3}
+--- !u!114 &8279207742958901572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8279207742955668803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!1 &8311908929932632290
 GameObject:
   m_ObjectHideFlags: 0
@@ -64017,8 +65027,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8322172960277174455}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000017849867, y: 0.9996305, z: -0.00000012200326, w: 0.027182823}
-  m_LocalPosition: {x: 33.69129, y: 1.0036359, z: 88.2716}
+  m_LocalRotation: {x: -0.0000000051887383, y: 0.9996305, z: 0.000000022351742, w: 0.02718284}
+  m_LocalPosition: {x: 33.69129, y: 1.0036356, z: 88.2716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -64037,6 +65047,7 @@ GameObject:
   - component: {fileID: 8322172960274908791}
   - component: {fileID: 704915451}
   - component: {fileID: 704915450}
+  - component: {fileID: 8322172960277174456}
   m_Layer: 0
   m_Name: Vehicle_Car_color02 (5)
   m_TagString: Untagged
@@ -64044,6 +65055,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8322172960277174456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8322172960277174455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &8334076650451903905
 Transform:
   m_ObjectHideFlags: 0
@@ -64120,6 +65143,7 @@ GameObject:
   - component: {fileID: 8335012857064197442}
   - component: {fileID: 1347389085}
   - component: {fileID: 1347389084}
+  - component: {fileID: 8335012857065328515}
   m_Layer: 0
   m_Name: Vehicle_Bus_color02
   m_TagString: Untagged
@@ -64135,8 +65159,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8335012857062265730}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000075496466, y: 0.70710295, z: 0.00000011236261, w: 0.70711064}
-  m_LocalPosition: {x: -96.98589, y: 0.20505583, z: -0.14875726}
+  m_LocalRotation: {x: 0.00000000538609, y: 0.7071026, z: 0.000000060383165, w: 0.707111}
+  m_LocalPosition: {x: -96.98589, y: 0.20505595, z: -0.14875697}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -64198,6 +65222,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8335012857062265730}
   m_Mesh: {fileID: 4300000, guid: 0d82ae0493e1c264bad0588fde0a3d8a, type: 3}
+--- !u!114 &8335012857065328515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8335012857062265730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &8365374638385238047
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -64927,6 +65963,7 @@ GameObject:
   - component: {fileID: 8448072480071988842}
   - component: {fileID: 126808638}
   - component: {fileID: 126808637}
+  - component: {fileID: 8448072480071988843}
   m_Layer: 0
   m_Name: Vehicle_Ambulance
   m_TagString: Untagged
@@ -64942,8 +65979,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8448072480069986474}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000017461875, y: 0.0000026784517, z: 0.000000022573769, w: 1}
-  m_LocalPosition: {x: -110.49373, y: 0.20013905, z: -61.284477}
+  m_LocalRotation: {x: -0.0000000066867294, y: 0.0000043544082, z: 0.000000041963172, w: 1}
+  m_LocalPosition: {x: -110.49367, y: 0.2001388, z: -61.284477}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -65005,6 +66042,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8448072480071988843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8448072480069986474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &8457684563539414357
 Transform:
   m_ObjectHideFlags: 0
@@ -66110,8 +67159,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8622340602802215323}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0000014534726, y: 0.9999319, z: 0.0000010109507, w: -0.011680232}
-  m_LocalPosition: {x: 113.09006, y: 1.0036364, z: -15.219251}
+  m_LocalRotation: {x: -0.000000015692223, y: 0.9999319, z: 0.00000002514571, w: -0.0116802305}
+  m_LocalPosition: {x: 113.0901, y: 1.0036359, z: -15.219251}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -66130,6 +67179,7 @@ GameObject:
   - component: {fileID: 8622340602800277339}
   - component: {fileID: 182957229}
   - component: {fileID: 182957228}
+  - component: {fileID: 8622340602802215324}
   m_Layer: 0
   m_Name: Vehicle_Car_color01 (1)
   m_TagString: Untagged
@@ -66137,6 +67187,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8622340602802215324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8622340602802215323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &8626772633780353637
 Transform:
   m_ObjectHideFlags: 0
@@ -66264,8 +67326,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8636967079995848359}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000007644683, y: 0.00000043622322, z: 0.000000101391706, w: 1}
-  m_LocalPosition: {x: 128.85266, y: 0.20060658, z: 44.651245}
+  m_LocalRotation: {x: 8.067169e-11, y: 0.0000004376194, z: -0.00000002286501, w: 1}
+  m_LocalPosition: {x: 128.85266, y: 0.2006067, z: 44.651245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -66284,6 +67346,7 @@ GameObject:
   - component: {fileID: 8636967079993911399}
   - component: {fileID: 1832022680}
   - component: {fileID: 1832022679}
+  - component: {fileID: 8636967079995848360}
   m_Layer: 0
   m_Name: Vehicle_Taxi (6)
   m_TagString: Untagged
@@ -66291,6 +67354,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8636967079995848360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8636967079995848359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &8647932804901635942
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -66871,6 +67946,7 @@ GameObject:
   - component: {fileID: 8784858307793466665}
   - component: {fileID: 829774953}
   - component: {fileID: 829774952}
+  - component: {fileID: 8784858307794466794}
   m_Layer: 0
   m_Name: Vehicle_Truck_color02 (1)
   m_TagString: Untagged
@@ -66886,8 +67962,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8784858307791268841}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0000000087839, y: -0.70712566, z: 0.000000020489097, w: 0.70708793}
-  m_LocalPosition: {x: -79.98789, y: 0.20305383, z: -53.31031}
+  m_LocalRotation: {x: -0.000000024025212, y: -0.70712566, z: 0.00000005029142, w: 0.70708793}
+  m_LocalPosition: {x: -79.98789, y: 0.20305395, z: -53.31031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -66949,6 +68025,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8784858307791268841}
   m_Mesh: {fileID: 4300000, guid: 0f8edee900fd5e74bb318fbd330392e4, type: 3}
+--- !u!114 &8784858307794466794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8784858307791268841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &8786474184212290804
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -67608,6 +68696,7 @@ GameObject:
   - component: {fileID: 8850987709100127443}
   - component: {fileID: 1655349244}
   - component: {fileID: 1655349243}
+  - component: {fileID: 8850987709102552628}
   m_Layer: 0
   m_Name: Vehicle_SUV_color01 (2)
   m_TagString: Untagged
@@ -67623,13 +68712,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8850987709102058003}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000045096463, y: -0.7071116, z: 0.0000000949949, w: 0.70710206}
+  m_LocalRotation: {x: 0.000000001351502, y: -0.7071116, z: 0.000000029802322, w: 0.707102}
   m_LocalPosition: {x: -81.80011, y: 0.20867157, z: -112.84864}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8850987709102552628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8850987709102058003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &8857250513613284050
 Transform:
   m_ObjectHideFlags: 0
@@ -69098,6 +70199,7 @@ GameObject:
   - component: {fileID: 9040884678183092234}
   - component: {fileID: 1184096551}
   - component: {fileID: 1184096550}
+  - component: {fileID: 9040884678184223435}
   m_Layer: 0
   m_Name: Vehicle_SUV_color01 (5)
   m_TagString: Untagged
@@ -69113,8 +70215,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9040884678181166794}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.01797766, y: -0.7042054, z: -0.017935127, w: 0.70954204}
-  m_LocalPosition: {x: 108.3382, y: 0.5990776, z: -104.2481}
+  m_LocalRotation: {x: -0.018037407, y: -0.70419914, z: -0.017917955, w: 0.7095472}
+  m_LocalPosition: {x: 108.33824, y: 0.5992148, z: -104.248055}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -69176,6 +70278,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9040884678181166794}
   m_Mesh: {fileID: 4300000, guid: c887da5f6e3230f4aa38afe5e8e30387, type: 3}
+--- !u!114 &9040884678184223435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9040884678181166794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &9041452866878984700
 Transform:
   m_ObjectHideFlags: 0
@@ -69373,8 +70487,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9064255128609427003}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000007056336, y: -0.000005770261, z: -0.0000007188541, w: 1}
-  m_LocalPosition: {x: 129.15701, y: 0.2051655, z: -56.368076}
+  m_LocalRotation: {x: -7.9528806e-10, y: -0.000003823808, z: 0.000000005138332, w: 1}
+  m_LocalPosition: {x: 129.15701, y: 0.20516491, z: -56.36808}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -69393,6 +70507,7 @@ GameObject:
   - component: {fileID: 9064255128611426555}
   - component: {fileID: 1953321764}
   - component: {fileID: 1953321763}
+  - component: {fileID: 9064255128612426300}
   m_Layer: 0
   m_Name: Vehicle_Pick up Truck_color02 (4)
   m_TagString: Untagged
@@ -69456,6 +70571,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9064255128609427003}
   m_Mesh: {fileID: 4300000, guid: 6780ac7fd67c9ab43aebe63ff3fb60aa, type: 3}
+--- !u!114 &9064255128612426300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9064255128609427003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &9065712710443887041
 Transform:
   m_ObjectHideFlags: 0
@@ -70098,6 +71225,7 @@ GameObject:
   - component: {fileID: 9132503312709079895}
   - component: {fileID: 482912638}
   - component: {fileID: 482912637}
+  - component: {fileID: 9132503312711504312}
   m_Layer: 0
   m_Name: Vehicle_Truck_color03 (1)
   m_TagString: Untagged
@@ -70113,13 +71241,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9132503312711077271}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000033020118, y: 0.9998751, z: 0.000000029802326, w: 0.015802905}
-  m_LocalPosition: {x: 97.05032, y: 1.0030547, z: -100.11295}
+  m_LocalRotation: {x: 0.000000055950295, y: 0.9998751, z: 0.000000022351742, w: 0.015802922}
+  m_LocalPosition: {x: 97.05032, y: 1.0030545, z: -100.11295}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6412517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9132503312711504312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9132503312711077271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!4 &9170539486907578473
 Transform:
   m_ObjectHideFlags: 0
@@ -70128,8 +71268,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9170539486907868233}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000014157216, y: -0.7080282, z: 0.000000048428767, w: 0.70618415}
-  m_LocalPosition: {x: -40.90396, y: 1.0001384, z: -80.44281}
+  m_LocalRotation: {x: -0.000000011773977, y: -0.7080272, z: 0.0000000037252903, w: 0.7061853}
+  m_LocalPosition: {x: -40.90396, y: 1.0001385, z: -80.44281}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -70148,6 +71288,7 @@ GameObject:
   - component: {fileID: 9170539486909872777}
   - component: {fileID: 694461141}
   - component: {fileID: 694461140}
+  - component: {fileID: 9170539486909872778}
   m_Layer: 0
   m_Name: Vehicle_Ambulance (4)
   m_TagString: Untagged
@@ -70211,6 +71352,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9170539486909872778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9170539486907868233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6600ec70e5ed244ea8f0b3950646d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventPhysicsTagAuthoring
 --- !u!33 &9200549110398954900
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -70472,10 +71625,9 @@ SceneRoots:
   - {fileID: 250006008}
   - {fileID: 1185192702}
   - {fileID: 127341805}
-  - {fileID: 1469578332}
   - {fileID: 677152588}
   - {fileID: 1895121013}
   - {fileID: 2130289376}
-  - {fileID: 8202087381432679606}
   - {fileID: 6412517}
   - {fileID: 1231070527}
+  - {fileID: 235026032}

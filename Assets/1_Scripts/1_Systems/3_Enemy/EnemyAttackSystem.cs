@@ -15,8 +15,8 @@ partial struct EnemyAttackSystem : ISystem
 
     [BurstCompile]
     public void OnUpdate(ref SystemState state) {
-        var pause = SystemAPI.GetSingleton<PauseComponent>();
-        if (pause.IsPaused)
+        SystemAPI.TryGetSingleton<PauseComponent>(out var pause);
+        if (pause!.IsPaused)
             return;
 
         //Get Plyaer Pos

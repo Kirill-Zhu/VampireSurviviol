@@ -5,7 +5,7 @@ using Unity.Physics.Systems;
 using Unity.Collections;
 using UnityEngine;
 using LVLUP;
-using Unity.Mathematics;
+
 
 
 [RequireMatchingQueriesForUpdate]

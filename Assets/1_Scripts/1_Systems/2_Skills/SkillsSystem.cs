@@ -1,32 +1,32 @@
-
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Transforms;
-using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireMatchingQueriesForUpdate]
+
 partial struct SkillsSystem : ISystem
 {
     float3 playerPos;
     Skills skills;
     private bool _ultWasPressed;
     private bool _canUlti;
- 
+
+    private float _antiGravitonRadius;
 
     [BurstCompile]
     public void OnCreate(ref SystemState state)
     {
-    
+        _antiGravitonRadius = 15;
     }
 
     [BurstCompile]
    
     public void OnUpdate(ref SystemState state) {
-        var pause = SystemAPI.GetSingleton<PauseComponent>();
-        if (pause.IsPaused)
+        SystemAPI.TryGetSingleton<PauseComponent>(out var pause);
+        if (pause!.IsPaused)
             return;
 
         foreach (RefRW<Skills> skills in SystemAPI.Query<RefRW<Skills>>().WithAll<PlayerInput>()) {

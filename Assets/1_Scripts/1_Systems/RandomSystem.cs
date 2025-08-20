@@ -1,4 +1,4 @@
-using System.Diagnostics;
+
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;

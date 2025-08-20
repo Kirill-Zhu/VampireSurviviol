@@ -1,4 +1,3 @@
-using UnityEngine;
 using Unity.Burst;
 using Unity.Entities;
 
@@ -9,8 +8,8 @@ partial struct DestroyDelayedSystem : ISystem
     [BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
-        var pause = SystemAPI.GetSingleton<PauseComponent>();
-        if (pause.IsPaused)
+        SystemAPI.TryGetSingleton<PauseComponent>(out var pause);
+        if (pause!.IsPaused)
             return;
 
         EntityCommandBuffer ecb = new EntityCommandBuffer(Unity.Collections.Allocator.Temp);    

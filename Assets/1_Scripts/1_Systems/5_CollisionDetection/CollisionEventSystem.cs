@@ -4,7 +4,7 @@ using Unity.Entities;
 using Unity.Physics;
 using Unity.Physics.Systems;
 using Unity.Collections;
-using UnityEngine;
+
 
 //// Компонент для отметки объектов, которые должны обрабатывать коллизии
 public struct CollisionProcessor : IComponentData { }
@@ -63,10 +63,10 @@ public partial struct SimpleCollisionSystem : ISystem {
             bool BIsHealth = EnemyHealthLookUp.HasComponent(entityB);
 
             bool AIsPlayerProjectile = PlayerProjectileLookup.HasComponent(entityA);
-            bool BISPlyaerProjectile = PlayerProjectileLookup.HasComponent(entityB);
+            bool BIsPlyaerProjectile = PlayerProjectileLookup.HasComponent(entityB);
 
 
-            if (AIsHealth && BISPlyaerProjectile) {
+            if (AIsHealth && BIsPlyaerProjectile) {
                 // Получаем скорости (если есть)
                 var projectile = PlayerProjectileLookup[entityB];
                 var enemy = EnemyHealthLookUp[entityA];
@@ -81,6 +81,8 @@ public partial struct SimpleCollisionSystem : ISystem {
                     AudioOnCollisonLookup[entityB] = audioSource;
                  
                     ecb.AddComponent<AudioOnCollision>(collisionEvent.BodyIndexB, entityB, new AudioOnCollision { ShouldPlay = true });
+                    ecb.AddComponent<DecalComponent>(collisionEvent.BodyIndexB, entityB, new DecalComponent { DecalType = DecalType.Blood} );
+                    ecb.AddComponent<VFXPlayComponent>(((byte)collisionEvent.BodyIndexB), entityB, new VFXPlayComponent { VFXType = VFXType.Blood });
                 }
                
                 //Destroy Projectile
@@ -91,7 +93,34 @@ public partial struct SimpleCollisionSystem : ISystem {
                     ecb.AddComponent<DestroyTag>(collisionEvent.BodyIndexA, entityA);
                 }
             }
-           
+            if (BIsHealth && AIsPlayerProjectile) {
+                // Получаем скорости (если есть)
+                var projectile = PlayerProjectileLookup[entityA];
+                var enemy = EnemyHealthLookUp[entityB];
+
+                enemy.Health -= projectile.Damage;
+
+
+                EnemyHealthLookUp[entityB] = enemy;
+                //Audio
+                if (AudioOnCollisonLookup.HasComponent(entityA)) {
+                    var audioSource = AudioOnCollisonLookup[entityA];
+                    AudioOnCollisonLookup[entityA] = audioSource;
+
+                    ecb.AddComponent<AudioOnCollision>(collisionEvent.BodyIndexA, entityA, new AudioOnCollision { ShouldPlay = true });
+                    ecb.AddComponent<DecalComponent>(collisionEvent.BodyIndexA, entityA, new DecalComponent { DecalType = DecalType.Blood });
+                    ecb.AddComponent<VFXPlayComponent>(((byte)collisionEvent.BodyIndexA), entityA, new VFXPlayComponent {VFXType = VFXType.Blood});
+                }
+
+                //Destroy Projectile
+                ecb.AddComponent<DestroyTag>(collisionEvent.BodyIndexB, entityA);
+
+                //Destroy Enemy
+                if (enemy.Health <= 0) {
+                    ecb.AddComponent<DestroyTag>(collisionEvent.BodyIndexA, entityB);
+                }
+            }
+
         }
     }
 
