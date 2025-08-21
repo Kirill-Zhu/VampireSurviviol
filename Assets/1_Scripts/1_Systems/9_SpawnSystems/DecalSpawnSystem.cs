@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Unity.Entities;
 using Unity.Transforms;
 [RequireMatchingQueriesForUpdate]
@@ -17,10 +18,9 @@ partial class DecalSpawnSystem : SystemBase
 
         EntityCommandBuffer ecb = _ecbSystem.CreateCommandBuffer();
         Entities.ForEach((Entity entity, ref DecalComponent decaComponent, ref LocalTransform localTransform) => {
-
-            _decalSpawner.SpawnDecal(decaComponent.DecalType, localTransform.Position);
-            ecb.AddComponent(entity, new DestroyDelayed { TimeToDestroy = 1 });
-
+            UnityEngine.Debug.Log("Spawn Decal");
+            _decalSpawner.SpawnDecal(decaComponent.decalType, localTransform.Position);
+            ecb.RemoveComponent<DecalComponent>(entity);
         }).WithoutBurst().Run();
 
         _ecbSystem.AddJobHandleForProducer(Dependency);

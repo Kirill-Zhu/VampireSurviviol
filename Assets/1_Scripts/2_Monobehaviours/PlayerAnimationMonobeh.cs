@@ -68,10 +68,11 @@ public class PlayerAnimationMonobeh : MonoBehaviour
 
         _animator.SetFloat("XMoveAxis", -_XYDotRotation[0]);
         _animator.SetFloat("YMoveAxis", -_XYDotRotation[1]);
-        if (_playerInputs.UltiAction.WasPressedThisFrame()) {
+        if (_playerInputs.UltiAction.WasPressedThisFrame())
             _animator.CrossFade("Ulti", 0.05f, 1);
-            _animator.CrossFade("Ulti", 0.05f, 2);
-        }
+        
+        if (_playerInputs.MeleAttackAction.WasPressedThisFrame()) 
+            _animator.CrossFade("MeleAttack", 0.05f,1);
 
     }
     private struct MoveJob : IJob {

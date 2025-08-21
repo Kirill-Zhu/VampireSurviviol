@@ -9,8 +9,8 @@ using UnityEngine;
 
 partial struct SkillsSystem : ISystem
 {
-    float3 playerPos;
-    Skills skills;
+    private float3 _playerPos;
+    private Skills _skills;
     private bool _ultWasPressed;
     private bool _canUlti;
 
@@ -49,13 +49,13 @@ partial struct SkillsSystem : ISystem
                 SystemAPI.Query<
                 RefRO<LocalTransform>
                 >().WithAll<PlayerInput>()) {
-                playerPos = localTransform.ValueRO.Position;
+                _playerPos = localTransform.ValueRO.Position;
             }
             //// GetPlayer SKills
             foreach (RefRW<Skills> skills in SystemAPI.Query<RefRW<Skills>>().WithAll<PlayerInput>()) {
-                this.skills.PowerUlti = skills.ValueRO.PowerUlti;
-                this.skills.RangeUlti = skills.ValueRO.RangeUlti;
-                this.skills.Damage = skills.ValueRO.Damage;
+                this._skills.PowerUlti = skills.ValueRO.PowerUlti;
+                this._skills.RangeUlti = skills.ValueRO.RangeUlti;
+                this._skills.Damage = skills.ValueRO.Damage;
                 skills.ValueRW.UltiTimer = 0;
             }
 
@@ -64,15 +64,15 @@ partial struct SkillsSystem : ISystem
             _ultWasPressed = false;
             UltiJob ultiJob = new UltiJob() {
                 ecb = ecb,
-                playerPos = this.playerPos,
-                skills = this.skills,
+                playerPos = this._playerPos,
+                skills = this._skills,
                 deltaTime = SystemAPI.Time.DeltaTime,
                 amountOfObjects = 0
             };
             ultiJob.ScheduleParallel();
             UltyPhysicsJob physicsJob = new UltyPhysicsJob() {
-                playerPos = this.playerPos,
-                skills = this.skills,
+                playerPos = this._playerPos,
+                skills = this._skills,
             };
             physicsJob.ScheduleParallel();
         }

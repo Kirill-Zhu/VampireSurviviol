@@ -31,7 +31,8 @@ public class PlayerInputs : MonoBehaviour
     public bool UltiWasPressed = false;
     public InputAction UltiAction;
     public InputAction DashAction;
-
+    public bool MeleAttackWasPressd = false;
+    public InputAction MeleAttackAction;
     [Header("UI Navigation")]
     private Vector2 _UINavigation;
     private InputAction _UINavigationAction;
@@ -49,7 +50,8 @@ public class PlayerInputs : MonoBehaviour
         ShootingAction = InputSystem.actions.FindAction("Fire");
         UltiAction = InputSystem.actions.FindAction("Ulti");
         DashAction = InputSystem.actions.FindAction("Dash");
-        
+        MeleAttackAction = InputSystem.actions.FindAction("MeleAttack");
+
         _moveAction.Enable();
         _cameraLookAction.Enable();
         ShootingAction.Enable();
@@ -111,7 +113,10 @@ public class PlayerInputs : MonoBehaviour
         //Ulti Inputs Read
         if (UltiAction.WasPressedThisFrame())
             UltiWasPressed = true;
-
+        //Mele Attack
+        if (MeleAttackAction.WasPressedThisFrame()) {
+            MeleAttackWasPressd = true;
+        }
         //-------------------------------------------UI Input system---------------------------------------------
     
 
@@ -145,7 +150,7 @@ public class PlayerInputs : MonoBehaviour
         }
 
         //Shooting
-        entityManager = World.DefaultGameObjectInjectionWorld.EntityManager; // Create Entity world manager
+     
         entityQuery = new EntityQueryBuilder(Allocator.Temp).WithAll<ControlledGun>().Build(entityManager);
         entityArray = entityQuery.ToEntityArray(Allocator.Temp);
 
@@ -159,7 +164,7 @@ public class PlayerInputs : MonoBehaviour
         }
         // Skills
 
-        entityManager = World.DefaultGameObjectInjectionWorld.EntityManager; // Create Entity world manager
+     
         entityQuery = new EntityQueryBuilder(Allocator.Temp).WithAll<Skills>().Build(entityManager);
         entityArray = entityQuery.ToEntityArray(Allocator.Temp);
 
@@ -170,6 +175,18 @@ public class PlayerInputs : MonoBehaviour
             entityManager.SetComponentData(entityArray[i], skills);
             if (UltiWasPressed) {
                 UltiWasPressed = false;
+            }
+        }
+        entityQuery = new EntityQueryBuilder(Allocator.Temp).WithAll<PlayerMeleAttack>().Build(entityManager);
+        entityArray = entityQuery.ToEntityArray(Allocator.Temp);
+
+        NativeArray<PlayerMeleAttack> playerAttackArray = entityQuery.ToComponentDataArray<PlayerMeleAttack>(Allocator.Temp);
+        for (int i = 0; i < skillsAray.Length; i++) {
+            PlayerMeleAttack palyerAttack = playerAttackArray[i];
+            palyerAttack.meleAttackWasPressed = MeleAttackWasPressd;
+            entityManager.SetComponentData(entityArray[i], palyerAttack);
+            if (MeleAttackWasPressd) {
+                MeleAttackWasPressd = false;
             }
         }
     }

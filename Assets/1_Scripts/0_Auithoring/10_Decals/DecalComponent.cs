@@ -1,6 +1,6 @@
 using Unity.Entities;
 public struct DecalComponent : IComponentData
 {
-    public DecalType DecalType;
+    public DecalType decalType;
 
 }

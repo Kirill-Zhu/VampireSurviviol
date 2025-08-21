@@ -17,8 +17,8 @@ public partial struct EnemySpawnSystem : ISystem {
     public void OnCreate(ref SystemState state) {
 
         _random = new Unity.Mathematics.Random((uint)System.DateTime.Now.Ticks);
-        _sapwnRate = 0.03f;
-        _maxUnits = 1024;
+        _sapwnRate = 0.02f;
+        _maxUnits = 856;
     }
 
     public void OnUpdate(ref SystemState state) {

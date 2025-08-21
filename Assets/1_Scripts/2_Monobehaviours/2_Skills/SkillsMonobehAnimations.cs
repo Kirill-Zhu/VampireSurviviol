@@ -6,6 +6,7 @@ public class SkillsMonobehAnimations : MonoBehaviour
     [SerializeField] private ParticleSystem[] _ulitParitcle;
     [SerializeField] private ParticleSystem[] _dashParticle;
     [SerializeField] private ParticleSystem[] _antiGravitationParticle;
+    [SerializeField] private ParticleSystem[] _meleParticle;
     private void Update() {
         if (PlayerInputs.Instance.UltiAction.WasPressedThisFrame()&&PlayerUltiUI.Instance.CanUlti()) {
             foreach (var particle in _ulitParitcle) { 
@@ -22,5 +23,9 @@ public class SkillsMonobehAnimations : MonoBehaviour
                 particle.Play();
             }
         }
+        if(PlayerInputs.Instance.MeleAttackAction.WasPressedThisFrame())
+            foreach (var particle in _meleParticle) {
+                particle.Play();
+            }
     }
 }

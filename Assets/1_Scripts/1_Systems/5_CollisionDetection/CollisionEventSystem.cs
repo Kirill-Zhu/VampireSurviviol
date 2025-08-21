@@ -81,7 +81,7 @@ public partial struct SimpleCollisionSystem : ISystem {
                     AudioOnCollisonLookup[entityB] = audioSource;
                  
                     ecb.AddComponent<AudioOnCollision>(collisionEvent.BodyIndexB, entityB, new AudioOnCollision { ShouldPlay = true });
-                    ecb.AddComponent<DecalComponent>(collisionEvent.BodyIndexB, entityB, new DecalComponent { DecalType = DecalType.Blood} );
+                    ecb.AddComponent<DecalComponent>(collisionEvent.BodyIndexB, entityB, new DecalComponent { decalType = DecalType.Blood} );
                     ecb.AddComponent<VFXPlayComponent>(((byte)collisionEvent.BodyIndexB), entityB, new VFXPlayComponent { VFXType = VFXType.Blood });
                 }
                
@@ -108,7 +108,7 @@ public partial struct SimpleCollisionSystem : ISystem {
                     AudioOnCollisonLookup[entityA] = audioSource;
 
                     ecb.AddComponent<AudioOnCollision>(collisionEvent.BodyIndexA, entityA, new AudioOnCollision { ShouldPlay = true });
-                    ecb.AddComponent<DecalComponent>(collisionEvent.BodyIndexA, entityA, new DecalComponent { DecalType = DecalType.Blood });
+                    ecb.AddComponent<DecalComponent>(collisionEvent.BodyIndexA, entityA, new DecalComponent { decalType = DecalType.Blood });
                     ecb.AddComponent<VFXPlayComponent>(((byte)collisionEvent.BodyIndexA), entityA, new VFXPlayComponent {VFXType = VFXType.Blood});
                 }
 
