@@ -2,25 +2,33 @@ using Unity.Entities;
 using Unity.Transforms;
 using UnityEngine;
 using Unity.Mathematics;
-
+using System.Collections.Generic;
+using Unity.Collections;
+using Unity.Burst;
 
 
 public partial struct EnemySpawnSystem : ISystem {
+    /// <summary>
+    /// Дистанция спавна внизу в методе RandomNearSpawnPos
+    /// </summary>
 
-
-    private float _sapwnRate;
+    private float _spawnRate;
     private double _elapsedTime;
     private double _lastUpdatedTime;
+    private float _TimeToUpSpawnRate;
+    private float _upSpawnRateElapsedTime;
     private int _maxUnits;
     private int _currentUnits;
     private Unity.Mathematics.Random _random;
     public void OnCreate(ref SystemState state) {
 
         _random = new Unity.Mathematics.Random((uint)System.DateTime.Now.Ticks);
-        _sapwnRate = 0.02f;
-        _maxUnits = 856;
-    }
+        _spawnRate = 5f;
+        _maxUnits = 600;
+        _TimeToUpSpawnRate = 15;
+}
 
+    [BurstCompile]
     public void OnUpdate(ref SystemState state) {
         //Pause State
         SystemAPI.TryGetSingleton<PauseComponent>(out var pause);
@@ -34,9 +42,22 @@ public partial struct EnemySpawnSystem : ISystem {
         if (_currentUnits > _maxUnits)
             return;
         //SpawnRate
+        if(_upSpawnRateElapsedTime >=_TimeToUpSpawnRate) {
+            _upSpawnRateElapsedTime = 0;
+            
+            _spawnRate -= 0.05f;
+            if(_spawnRate <= 0) {
+                _spawnRate = 0.03f;
+            }
+        }
+        _upSpawnRateElapsedTime += SystemAPI.Time.DeltaTime;        
+        //Check Reload Spawn
         _elapsedTime = SystemAPI.Time.ElapsedTime;
-        if (_elapsedTime - _lastUpdatedTime < _sapwnRate)
+        if (_elapsedTime - _lastUpdatedTime < _spawnRate)
             return;
+
+
+        //---------------------------------------------------------------------
 
 
         _lastUpdatedTime = _elapsedTime;
@@ -58,12 +79,8 @@ public partial struct EnemySpawnSystem : ISystem {
             DynamicBuffer<EnemySpawnerBufferElement>
             >()) {
 
-          
-                int randomInt = _random.NextInt(0, 3);
-                Debug.Log("Spawn enemy" + "Random is : " + randomInt);
 
-
-
+            int randomInt = _random.NextInt(0, 3);
             switch (randomInt) {
                 case 0: {
                         //Zombie 1
@@ -79,7 +96,7 @@ public partial struct EnemySpawnSystem : ISystem {
                             RefRO<PlayerMover>,
                             RefRO<LocalTransform>
                             >()) {
-                            SystemAPI.SetComponent(enemy, LocalTransform.FromPosition(NearestToPlayerSpawnPos(localTransofrm.ValueRO.Position, bufferElement)));
+                            SystemAPI.SetComponent(enemy, LocalTransform.FromPosition(RandomNearSpawnPos(localTransofrm.ValueRO.Position, bufferElement, _random)));
                         }
                         // SystemAPI.SetComponent(enemy, UnitMover.SetSpeedComponents(UnityEngine.Random.Range(8, 10), 5), );
                         break;
@@ -97,7 +114,7 @@ public partial struct EnemySpawnSystem : ISystem {
                             RefRO<PlayerMover>,
                             RefRO<LocalTransform>
                             >()) {
-                            SystemAPI.SetComponent(enemy, LocalTransform.FromPosition(NearestToPlayerSpawnPos(localTransofrm.ValueRO.Position, bufferElement)));
+                            SystemAPI.SetComponent(enemy, LocalTransform.FromPosition(RandomNearSpawnPos(localTransofrm.ValueRO.Position, bufferElement, _random)));
                         }
 
                         break;
@@ -115,7 +132,7 @@ public partial struct EnemySpawnSystem : ISystem {
                             RefRO<PlayerMover>,
                             RefRO<LocalTransform>
                             >()) {
-                            SystemAPI.SetComponent(enemy, LocalTransform.FromPosition(NearestToPlayerSpawnPos(localTransofrm.ValueRO.Position, bufferElement)));
+                            SystemAPI.SetComponent(enemy, LocalTransform.FromPosition(RandomNearSpawnPos(localTransofrm.ValueRO.Position, bufferElement, _random)));
                         }
                         // SystemAPI.SetComponent(enemy, UnitMover.SetSpeedComponents(UnityEngine.Random.Range(8, 10), 5), );  
 
@@ -127,24 +144,23 @@ public partial struct EnemySpawnSystem : ISystem {
         
     }
 
-   public static float3 NearestToPlayerSpawnPos(float3 PlayerPos, DynamicBuffer<EnemySpawnerBufferElement> bufferElement) {
-       
+   public static float3 RandomNearSpawnPos(float3 PlayerPos, DynamicBuffer<EnemySpawnerBufferElement> bufferElement, Unity.Mathematics.Random random) {
 
-        float3 nearestPos = float3.zero;
-        float distance = 1;
+
+        List<float3> nearestPos = new List<float3>();
+        float distance = 50;
 
         for (int i = 0; i < bufferElement.Length; i++) {
             if (i == 0) {
-                distance = math.distance(PlayerPos, bufferElement[i].Value);
-                nearestPos = bufferElement[i].Value;
+                nearestPos.Add(bufferElement[i].Value);
                 continue;
             }
             if (math.distance(PlayerPos, bufferElement[i].Value) < distance) {
-                distance = math.distance(PlayerPos, bufferElement[i].Value);
-                nearestPos = bufferElement[i].Value;
-            }     
+                nearestPos.Add(bufferElement[i].Value);
+            }
         }
-        return nearestPos;
+
+        return nearestPos[random.NextInt(0, nearestPos.Count)];
        
    }
      

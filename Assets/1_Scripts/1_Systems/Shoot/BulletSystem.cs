@@ -15,6 +15,9 @@ partial struct BulletSystem : ISystem {
     [BurstCompile]
     public void OnUpdate(ref SystemState state) {
 
+        SystemAPI.TryGetSingleton<PauseComponent>(out var pause);
+        if (pause!.IsPaused)
+            return;
 
         EntityCommandBuffer ecb = new EntityCommandBuffer(Allocator.TempJob);
         foreach ((

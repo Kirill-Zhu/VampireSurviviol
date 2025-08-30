@@ -17,9 +17,9 @@ partial struct PlayerMoveSystem : ISystem
 
 
     public void OnUpdate(ref SystemState state) {
-        SystemAPI.TryGetSingleton<PauseComponent>(out var pause);
-        if (pause!.IsPaused)
-            return;
+        //SystemAPI.TryGetSingleton<PauseComponent>(out var pause);
+        //if (pause!.IsPaused)
+        //    return;
 
         //PlayerMoverJob job = new PlayerMoverJob() { 
         //    DeltaTime = SystemAPI.Time.DeltaTime};
@@ -37,7 +37,9 @@ partial struct PlayerMoveSystem : ISystem
             RefRW<LocalTransform>,
             RefRW<PhysicsVelocity>>().WithAll<PlayerInput>()) {
 
-
+            // Fix rotation
+            localTransform.ValueRW.Rotation.value.x = 0;
+            localTransform.ValueRW.Rotation.value.z = 0;
             float3 moveDirection = new float3();
             moveDirection = playerMover.ValueRO.InputTargetPosition;
             moveDirection = math.clamp(moveDirection, -playerMover.ValueRO.MoveSpeed, playerMover.ValueRO.MoveSpeed);

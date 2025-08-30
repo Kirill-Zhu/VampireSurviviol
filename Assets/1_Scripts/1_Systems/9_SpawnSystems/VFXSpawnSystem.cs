@@ -13,18 +13,15 @@ partial class VFXSpawnSystem : SystemBase
         _vfxSpawner = VFXSpawner.Instance;
         _ecbSystem = World.GetOrCreateSystemManaged<BeginSimulationEntityCommandBufferSystem>();   
     }
+    [BurstCompile]
     protected override void OnUpdate() {
         Entities.ForEach((ref VFXPlayComponent VFXCOmponent, ref LocalTransform localTransform) => {
             _vfxSpawner.PlayParticle(VFXCOmponent.VFXType, localTransform.Position);
-            UnityEngine.Debug.Log("Play VFX");
-
         }).WithoutBurst().Run();
 
         var ecb = _ecbSystem.CreateCommandBuffer();
         Entities.ForEach((Entity entity, ref VFXPlayComponent VFXCOmponent) => {
             ecb.RemoveComponent<VFXPlayComponent>(entity);
-            UnityEngine.Debug.Log("Play VFX");
-
         }).WithoutBurst().Run();
     }
    

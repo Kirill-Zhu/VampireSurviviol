@@ -38,7 +38,7 @@ public partial struct SimpleCollisionSystem : ISystem {
             EnemyHealthLookUp = SystemAPI.GetComponentLookup<EnemyHealth>(),
             PlayerProjectileLookup = SystemAPI.GetComponentLookup<PlayerProjectile>(true),
             AudioOnCollisonLookup = SystemAPI.GetComponentLookup<AudioOnCollision>(),
-
+            DecalComponentLookup = SystemAPI.GetComponentLookup<DecalComponent>(true),
             ecb = ecbSingletone.CreateCommandBuffer(state.WorldUnmanaged).AsParallelWriter(),
         };
 
@@ -52,7 +52,7 @@ public partial struct SimpleCollisionSystem : ISystem {
         public ComponentLookup<EnemyHealth> EnemyHealthLookUp;
         [ReadOnly] public ComponentLookup<PlayerProjectile> PlayerProjectileLookup;
         public ComponentLookup<AudioOnCollision> AudioOnCollisonLookup;
-        
+        [ReadOnly] public ComponentLookup<DecalComponent> DecalComponentLookup;
         public EntityCommandBuffer.ParallelWriter ecb;
         public void Execute(CollisionEvent collisionEvent) {
             Entity entityA = collisionEvent.EntityA;
@@ -65,6 +65,8 @@ public partial struct SimpleCollisionSystem : ISystem {
             bool AIsPlayerProjectile = PlayerProjectileLookup.HasComponent(entityA);
             bool BIsPlyaerProjectile = PlayerProjectileLookup.HasComponent(entityB);
 
+
+            //-----------------------------------------------------------1t----------------------------------------------------------
 
             if (AIsHealth && BIsPlyaerProjectile) {
                 // Получаем скорости (если есть)
@@ -81,8 +83,10 @@ public partial struct SimpleCollisionSystem : ISystem {
                     AudioOnCollisonLookup[entityB] = audioSource;
                  
                     ecb.AddComponent<AudioOnCollision>(collisionEvent.BodyIndexB, entityB, new AudioOnCollision { ShouldPlay = true });
-                    ecb.AddComponent<DecalComponent>(collisionEvent.BodyIndexB, entityB, new DecalComponent { decalType = DecalType.Blood} );
                     ecb.AddComponent<VFXPlayComponent>(((byte)collisionEvent.BodyIndexB), entityB, new VFXPlayComponent { VFXType = VFXType.Blood });
+                   
+                    if (!DecalComponentLookup.HasComponent(entityA))
+                        ecb.AddComponent<DecalComponent>(collisionEvent.BodyIndexB, entityA, new DecalComponent { decalType = DecalType.Blood} );
                 }
                
                 //Destroy Projectile
@@ -93,6 +97,8 @@ public partial struct SimpleCollisionSystem : ISystem {
                     ecb.AddComponent<DestroyTag>(collisionEvent.BodyIndexA, entityA);
                 }
             }
+
+            //-------------------------------------------------------2d-------------------------------------------
             if (BIsHealth && AIsPlayerProjectile) {
                 // Получаем скорости (если есть)
                 var projectile = PlayerProjectileLookup[entityA];
@@ -108,8 +114,10 @@ public partial struct SimpleCollisionSystem : ISystem {
                     AudioOnCollisonLookup[entityA] = audioSource;
 
                     ecb.AddComponent<AudioOnCollision>(collisionEvent.BodyIndexA, entityA, new AudioOnCollision { ShouldPlay = true });
-                    ecb.AddComponent<DecalComponent>(collisionEvent.BodyIndexA, entityA, new DecalComponent { decalType = DecalType.Blood });
                     ecb.AddComponent<VFXPlayComponent>(((byte)collisionEvent.BodyIndexA), entityA, new VFXPlayComponent {VFXType = VFXType.Blood});
+                   
+                    if(!DecalComponentLookup.HasComponent(entityB)) 
+                        ecb.AddComponent<DecalComponent>(collisionEvent.BodyIndexA, entityB, new DecalComponent { decalType = DecalType.Blood});
                 }
 
                 //Destroy Projectile

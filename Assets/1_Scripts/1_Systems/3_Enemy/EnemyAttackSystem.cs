@@ -4,13 +4,12 @@ using Unity.Transforms;
 using Unity.Mathematics;
 using UnityEngine;
 
-partial struct EnemyAttackSystem : ISystem
-{
+partial struct EnemyAttackSystem : ISystem {
     float3 _playerPos;
+    private Entity _playerEntity;
     [BurstCompile]
-    public void OnCreate(ref SystemState state)
-    {
-        
+    public void OnCreate(ref SystemState state) {
+
     }
 
     [BurstCompile]
@@ -27,14 +26,17 @@ partial struct EnemyAttackSystem : ISystem
 
         //For Damage 
         var ecbSingleton = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>();
-        Entity playerEntity = SystemAPI.GetSingletonEntity<PlayerInput>();
 
+        foreach (var (playerInput, entity) in SystemAPI.Query<RefRO<PlayerInput>>().WithEntityAccess()) {
+
+            _playerEntity = entity;
+        }
         AttackJob job = new AttackJob() {
             DeltaTime = SystemAPI.Time.DeltaTime,
             PlayerPos = _playerPos,
 
             ecb = ecbSingleton.CreateCommandBuffer(state.WorldUnmanaged).AsParallelWriter(),
-            entity = playerEntity
+            entity = _playerEntity
         };
 
         job.ScheduleParallel();
@@ -42,17 +44,16 @@ partial struct EnemyAttackSystem : ISystem
         foreach (
             (RefRW<PlayerHealth> playerHealth,
             DynamicBuffer<PlayerDamageBufferElement> damageBuffer
-            ) in 
+            ) in
             SystemAPI.Query<
             RefRW<PlayerHealth>,
             DynamicBuffer<PlayerDamageBufferElement>
-            >()) 
-            {
-                foreach( var damageElement in damageBuffer) {
-                    playerHealth.ValueRW.Health -=damageElement.Value;
-                }
-                damageBuffer.Clear();
-            }   
+            >()) {
+            foreach (var damageElement in damageBuffer) {
+                playerHealth.ValueRW.Health -= damageElement.Value;
+            }
+            damageBuffer.Clear();
+        }
 
 
         //foreach ((RefRW<EnemyAttack> attack, RefRO<LocalTransform> localTransform) in SystemAPI.Query<RefRW<EnemyAttack>, RefRO<LocalTransform>>()) {
@@ -75,26 +76,25 @@ partial struct EnemyAttackSystem : ISystem
     }
 
     [BurstCompile]
-    public void OnDestroy(ref SystemState state)
-    {
-        
+    public void OnDestroy(ref SystemState state) {
+
     }
 }
 public partial struct AttackJob : IJobEntity {
-  
-   
+
+
     public float DeltaTime;
     public float3 PlayerPos;
 
     public EntityCommandBuffer.ParallelWriter ecb;
     public Entity entity;
-   
-  
-    public void Execute(ref EnemyAttack attack, in LocalTransform localTransform,[EntityIndexInQuery]int sortKey) {
+
+
+    public void Execute(ref EnemyAttack attack, in LocalTransform localTransform, [EntityIndexInQuery] int sortKey) {
         if (math.distance(localTransform.Position, PlayerPos) <= attack.AttackRange) {
             attack.AttackRealoadTimer += DeltaTime;
             attack.AttackTimeReloadTimer += DeltaTime;
-            if (attack.AttackRealoadTimer > attack.AttackRate && attack.AttackTimeReloadTimer>=attack.AttackTime) {
+            if (attack.AttackRealoadTimer > attack.AttackRate && attack.AttackTimeReloadTimer >= attack.AttackTime) {
                 Debug.Log("Enemy Attack");
 
                 PlayerDamageBufferElement playerDamageBuffer = new PlayerDamageBufferElement { Value = attack.Damage };

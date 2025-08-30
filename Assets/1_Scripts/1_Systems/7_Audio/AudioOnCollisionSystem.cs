@@ -11,7 +11,7 @@ public partial struct AudioOnCollisionSystem : ISystem {
     private bool _stopIterate;
     //private BeginInitializationEntityCommandBufferSystem _ecbSystem;
     private void OnCreate(ref SystemState state) {
-        _soundRate = 0.01f;
+        _soundRate = 0.05f;
     }
     
    
@@ -23,7 +23,7 @@ public partial struct AudioOnCollisionSystem : ISystem {
         if (currentTime - _lastUpdateTime < _soundRate) {
             return;
         }
-        _lastUpdateTime = currentTime;
+       
         _stopIterate = false;
        
         var ecb = new EntityCommandBuffer(Allocator.Temp);
@@ -48,9 +48,11 @@ public partial struct AudioOnCollisionSystem : ISystem {
                             Entity newEntity = ecb.Instantiate(element.Value);
                             ecb.SetComponent(newEntity, LocalTransform.FromPosition(localTransform.ValueRO.Position));
                             _stopIterate = true;
-                        }
+                            _lastUpdateTime = currentTime;
+                    }
                         //Entity newEtity2 = ecb.Instantiate(audioReferences.SoundPrefabsArray[0]);
                         audio.ValueRW.ShouldPlay = false;
+
                     }
             }
         }

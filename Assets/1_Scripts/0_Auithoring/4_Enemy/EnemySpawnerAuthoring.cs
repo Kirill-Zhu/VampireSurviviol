@@ -22,17 +22,17 @@ class EnemySpawnerAuthoring : MonoBehaviour
             }
         }
     }
-//    private void OnDrawGizmos() {
-//        Gizmos.color = Color.orangeRed;
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.orangeRed;
 
-//        for (int i = 0; i < SpawnPosArray.Length; i++) {
-//            Gizmos.DrawSphere(SpawnPosArray[i], 0.5f);
-//#if UNITY_EDITOR
-//            Handles.Label(SpawnPosArray[i] + Vector3.up, "Spawn Posion N: " + i);
-//#endif
-//        }
+        for (int i = 0; i < SpawnPosArray.Length; i++) {
+            Gizmos.DrawSphere(SpawnPosArray[i], 0.5f);
+#if UNITY_EDITOR
+            Handles.Label(SpawnPosArray[i] + Vector3.up, "Spawn Posion N: " + i);
+#endif
+        }
 
-//    }
+    }
 }
 public struct EnemySpawner : IComponentData {
 }

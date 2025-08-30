@@ -22,7 +22,7 @@ public partial struct CollisionPlayerAndExpSystem : ISystem {
     [BurstCompile]
     public void OnUpdate(ref SystemState state) {
 
-        var ecbSingletone = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>();
+        var ecbSingleton = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>();
 
         var collisionEventQueue = new NativeQueue<CollisionEventData>(Allocator.TempJob);
 
@@ -31,7 +31,7 @@ public partial struct CollisionPlayerAndExpSystem : ISystem {
         var playerAndExpCOllisionJob = new CollisionPlayerAndExpEventJob {
             ExpCrystal = SystemAPI.GetComponentLookup<ExpCrystal>(true),
             PlayerExp = SystemAPI.GetComponentLookup<PlayerExp>(),
-            ecb = ecbSingletone.CreateCommandBuffer(state.WorldUnmanaged).AsParallelWriter(),
+            ecb = ecbSingleton.CreateCommandBuffer(state.WorldUnmanaged).AsParallelWriter(),
             CollisionEvents = collisionEventQueue
         };
 

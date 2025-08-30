@@ -25,9 +25,9 @@ partial struct SkillsSystem : ISystem
     [BurstCompile]
    
     public void OnUpdate(ref SystemState state) {
-        SystemAPI.TryGetSingleton<PauseComponent>(out var pause);
-        if (pause!.IsPaused)
-            return;
+        //SystemAPI.TryGetSingleton<PauseComponent>(out var pause);
+        //if (pause!.IsPaused)
+        //    return;
 
         foreach (RefRW<Skills> skills in SystemAPI.Query<RefRW<Skills>>().WithAll<PlayerInput>()) {
 

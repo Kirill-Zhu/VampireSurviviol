@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Unity.Burst;
 using Unity.Entities;
 using Unity.Transforms;
 [RequireMatchingQueriesForUpdate]
@@ -13,16 +14,19 @@ partial class DecalSpawnSystem : SystemBase
         _ecbSystem = World.GetOrCreateSystemManaged<BeginSimulationEntityCommandBufferSystem>();
         _decalSpawner = DecalsSpawner.Instance;
     }
+
     protected override void OnUpdate() {
       
 
         EntityCommandBuffer ecb = _ecbSystem.CreateCommandBuffer();
         Entities.ForEach((Entity entity, ref DecalComponent decaComponent, ref LocalTransform localTransform) => {
-            UnityEngine.Debug.Log("Spawn Decal");
             _decalSpawner.SpawnDecal(decaComponent.decalType, localTransform.Position);
             ecb.RemoveComponent<DecalComponent>(entity);
+           
         }).WithoutBurst().Run();
 
         _ecbSystem.AddJobHandleForProducer(Dependency);
+
+      
     }
 }

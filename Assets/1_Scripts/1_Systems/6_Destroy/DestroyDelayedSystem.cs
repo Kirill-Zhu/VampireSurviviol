@@ -8,9 +8,9 @@ partial struct DestroyDelayedSystem : ISystem
     [BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
-        SystemAPI.TryGetSingleton<PauseComponent>(out var pause);
-        if (pause!.IsPaused)
-            return;
+        //SystemAPI.TryGetSingleton<PauseComponent>(out var pause);
+        //if (pause!.IsPaused)
+        //    return;
 
         EntityCommandBuffer ecb = new EntityCommandBuffer(Unity.Collections.Allocator.Temp);    
         foreach((var DelayedTag, var entity) in SystemAPI.Query<RefRW<DestroyDelayed>>().WithEntityAccess()) {
