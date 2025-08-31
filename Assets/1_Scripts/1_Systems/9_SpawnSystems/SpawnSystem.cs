@@ -23,7 +23,7 @@ public partial struct EnemySpawnSystem : ISystem {
     public void OnCreate(ref SystemState state) {
 
         _random = new Unity.Mathematics.Random((uint)System.DateTime.Now.Ticks);
-        _spawnRate = 5f;
+        _spawnRate = 0.5f;
         _maxUnits = 600;
         _TimeToUpSpawnRate = 15;
 }
